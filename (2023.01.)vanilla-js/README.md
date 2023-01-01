@@ -18,9 +18,9 @@
 
 ### 스터디 자료:
 
-- [바닐라 JS로 크롬 앱 만들기(노마드코더 JS 무료강의)](https://nomadcoders.co/javascript-for-beginners)
+- <a href="https://nomadcoders.co/javascript-for-beginners" target="_blank">바닐라 JS로 크롬 앱 만들기(노마드코더 JS 무료강의)</a>
 
-- [바닐라JS 챌린지(노마드코더 JS 챌린지)](https://nomadcoders.co/vanillajs-challenge)
+- <a href="https://nomadcoders.co/vanillajs-challenge" target="_blank">바닐라JS 챌린지(노마드코더 JS 챌린지)</a>
 
 ---
 
