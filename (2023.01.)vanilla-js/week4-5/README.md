@@ -1,3 +1,5 @@
+# [Vanilla JS 5주 완성😎](<https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/>)
+
 # 4, 5주차
 
 ## JS 챌린지 도전!
