@@ -2,7 +2,7 @@
 
 ### 스터디 비대면 모임 장소
 
-- -공사중⚠-
+- [ZEP 스터디 공간(비밀번호 7777)](https://zep.us/play/23VbEW)
 
 ### 목표:
 
@@ -12,13 +12,17 @@
 
 - 2023\. 1. 2.(월) ~ 2. 6.(월) (총 5주, 모임: 매주 목요일 21:00 ~ 22:00)
 
-### 스터디자료:
+### 참가자:
+
+- eunseo, 교사H, 기무1, 김진희, 뀨쌤, 두두두두두두둥, 듀비듀밥, 민트향기, 브루노마르스, 옐로씨드, 죠이, 주선, 폴짝스, 호로롱, 홍동(총 15명)
+
+### 스터디 자료:
 
 - [바닐라 JS로 크롬 앱 만들기(노마드코더 JS 무료강의)](https://nomadcoders.co/javascript-for-beginners)
 
 - [바닐라JS 챌린지(노마드코더 JS 챌린지)](https://nomadcoders.co/vanillajs-challenge)
 
-## [1주차 목표](<https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week1>)
+## [1주차](<https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week1>)
 
 ### 강의 듣기
 
@@ -32,7 +36,7 @@
 
 - DOM을 활용하여 각종 Event가 발생했을 때 동적인 페이지 만들기
 
-## [2주차 목표](<https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week2>)
+## [2주차](<https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week2>)
 
 ### 강의 듣기
 
@@ -46,7 +50,7 @@
 
 - 로그인, 시계, 명언과 배경 기능을 완성하고 자기만의 업그레이드하기
 
-## [3주차 목표](<https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week3>)
+## [3주차](<https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week3>)
 
 ### 강의 듣기
 
@@ -58,7 +62,7 @@
 
 - 투두리스트, 날씨 기능 완성하고 자기만의 업그레이드하기
 
-## 4, 5주차 목표
+## [4, 5주차](<https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week4-5>)
 
 - 1월 22일 (일) 자정까지 챌린지 신청하기
 
