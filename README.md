@@ -1,6 +1,6 @@
 # 스터디 자료실
 
-## [Vanilla JS 5주 완성😎](<https://github.com/teacher-kiwi/study-together/tree/main/(2023.01.)vanilla-js>)
+## [Vanilla JS 5주 완성😎](<https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/>)
 
 ### 목표:
 

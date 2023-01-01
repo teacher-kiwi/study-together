@@ -18,7 +18,7 @@
 
 - [바닐라JS 챌린지(노마드코더 JS 챌린지)](https://nomadcoders.co/vanillajs-challenge)
 
-## [1주차 목표](<https://github.com/teacher-kiwi/study-together/tree/main/(2023.01.)vanilla-js/week1>)
+## [1주차 목표](<https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week1>)
 
 ### 강의 듣기
 
@@ -32,7 +32,7 @@
 
 - DOM을 활용하여 각종 Event가 발생했을 때 동적인 페이지 만들기
 
-## [2주차 목표](<https://github.com/teacher-kiwi/study-together/tree/main/(2023.01.)vanilla-js/week2>)
+## [2주차 목표](<https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week2>)
 
 ### 강의 듣기
 
@@ -46,7 +46,7 @@
 
 - 로그인, 시계, 명언과 배경 기능을 완성하고 자기만의 업그레이드하기
 
-## [3주차 목표](<https://github.com/teacher-kiwi/study-together/tree/main/(2023.01.)vanilla-js/week3>)
+## [3주차 목표](<https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week3>)
 
 ### 강의 듣기
 
