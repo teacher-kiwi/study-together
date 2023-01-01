@@ -2,7 +2,7 @@
 
 ### 스터디 비대면 모임 장소
 
-- [ZEP 스터디 공간(비밀번호 7777)](https://zep.us/play/23VbEW)
+- <a href="https://zep.us/play/23VbEW" target="_blank">ZEP 스터디 공간(비밀번호 7777)</a>
 
 ### 목표:
 
@@ -22,6 +22,8 @@
 
 - [바닐라JS 챌린지(노마드코더 JS 챌린지)](https://nomadcoders.co/vanillajs-challenge)
 
+---
+
 ## [1주차](<https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week1>)
 
 ### 강의 듣기
@@ -35,6 +37,8 @@
 ### 과제
 
 - DOM을 활용하여 각종 Event가 발생했을 때 동적인 페이지 만들기
+
+---
 
 ## [2주차](<https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week2>)
 
@@ -50,6 +54,8 @@
 
 - 로그인, 시계, 명언과 배경 기능을 완성하고 자기만의 업그레이드하기
 
+---
+
 ## [3주차](<https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week3>)
 
 ### 강의 듣기
@@ -61,6 +67,8 @@
 ### 과제
 
 - 투두리스트, 날씨 기능 완성하고 자기만의 업그레이드하기
+
+---
 
 ## [4, 5주차](<https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week4-5>)
 

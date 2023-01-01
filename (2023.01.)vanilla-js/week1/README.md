@@ -1,4 +1,6 @@
-# 1주차 목표
+# [Vanilla JS 5주 완성😎](<https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/>)
+
+# 1주차
 
 ## 강의 듣기
 
