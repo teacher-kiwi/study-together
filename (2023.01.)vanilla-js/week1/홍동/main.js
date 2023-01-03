@@ -44,3 +44,13 @@ food = '햄버거';
 console.log(`나는 ${food}을 좋아해`);
 
 // myName = 'KH'; -> main.js:44 Uncaught TypeError: Assignment to constant variable.
+
+// #2.4 Boolean
+// 참과 거짓
+const amIFass = true;
+const amITeacher = false;
+
+const nothing = null; // 아무것도 없다. 아무것도 아닌 것, 자연적으로 발생하기 어렵다.
+
+let something;
+console.log(something); // undefined, 정의되지 않았다. 메모리에 자리는 차지하고 있다.
