@@ -54,3 +54,13 @@ const nothing = null; // 아무것도 없다. 아무것도 아닌 것, 자연적
 
 let something;
 console.log(something); // undefined, 정의되지 않았다. 메모리에 자리는 차지하고 있다.
+
+// #2.5 Array
+const daysOfWeek = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+
+// Get Item from Array
+console.log('금요일', daysOfWeek[4]); // 컴퓨터는 0부터 센다.
+
+// Add one more day to the array
+daysOfWeek.push('sun');
+console.log('일요일', daysOfWeek[6]);
