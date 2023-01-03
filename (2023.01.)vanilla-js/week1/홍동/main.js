@@ -29,3 +29,18 @@ console.log(a / b);
 const myName = 'HD'; // 변수명은 카멜 케이스
 
 console.log(`Hello ${myName}`);
+
+// #2.3 const and let
+// 변수를 만드는 두 가지 방법
+// 1. const - 값이 바뀔 수 없다. 값을 보호할 수 있다. 기본적으로 사용하자.
+// 2. let - 값이 바뀔 수 있다. 업데이트가 필요할 때. 필요할 때 사용하자.
+// 두 개의 변수 만드는 방법으로 개발자의 의도를 알 수 있다.
+// 처음에는 var로 변수를 만들었다. 하지만 이는 이제 쓰지 않도록 하자.
+
+let food = '피자';
+console.log(`나는 ${food}을 좋아해`);
+
+food = '햄버거';
+console.log(`나는 ${food}을 좋아해`);
+
+// myName = 'KH'; -> main.js:44 Uncaught TypeError: Assignment to constant variable.
