@@ -123,3 +123,36 @@ function calKrAge(ageOfForeigner) {
 
 const krAge = calKrAge(age);
 console.log(krAge);
+
+// #2.13~15 Conditionals
+const app = {
+  age,
+
+  init() {
+    this.age = Number(prompt('당신의 나이는?'));
+    this.validate();
+  },
+
+  validate() {
+    if (isNaN(this.age)) return this.init();
+    if (this.age < 1) return this.printError();
+
+    this.checkAge();
+  },
+
+  printError() {
+    alert('나이는 음수가 될 수 없어요!!');
+    this.init();
+  },
+
+  checkAge() {
+    if (this.age < 18) return alert('당신은 음주, 흡연을 할 수 없어요:(');
+    if (this.age > 50 && this.age < 100)
+      return alert('음주, 흡연을 할 수 있지만 건강을 생각하세요!');
+    if (this.age > 100) return alert('마음껏 즐기세요!');
+
+    alert('당신은 음주, 흡연을 즐길 수 있어요:)');
+  },
+};
+
+app.init();
