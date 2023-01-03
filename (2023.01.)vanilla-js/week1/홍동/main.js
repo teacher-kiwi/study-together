@@ -64,3 +64,17 @@ console.log('금요일', daysOfWeek[4]); // 컴퓨터는 0부터 센다.
 // Add one more day to the array
 daysOfWeek.push('sun');
 console.log('일요일', daysOfWeek[6]);
+
+// #2.6 Object
+const player = {
+  name: 'HD',
+  age: 30,
+  points: 10,
+  fat: true,
+};
+
+console.log(player);
+console.log(player.age);
+player.points = player.points + 5;
+player.lastName = 'potato';
+console.log(player);
