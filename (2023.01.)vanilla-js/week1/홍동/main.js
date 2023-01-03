@@ -78,3 +78,26 @@ console.log(player.age);
 player.points = player.points + 5;
 player.lastName = 'potato';
 console.log(player);
+
+// #2.7~2.8 Function
+
+function sum(a, b) {
+  console.log(`${a} + ${b} = ${a + b}`);
+}
+
+function divide(a, b) {
+  console.log(`${a} / ${b} = ${a / b}`);
+}
+
+sum(2, 3);
+divide(23, 7);
+
+const player2 = {
+  name: 'HD',
+  sayHello(name) {
+    console.log(`Hello ${this.name}! I'm ${name}:)`);
+  },
+};
+
+player2.sayHello('홍동');
+player2.sayHello('병연');
