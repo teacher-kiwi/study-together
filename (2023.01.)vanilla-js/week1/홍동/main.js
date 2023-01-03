@@ -101,3 +101,25 @@ const player2 = {
 
 player2.sayHello('홍동');
 player2.sayHello('병연');
+
+// #2.11 Returns
+
+const calculator = {
+  plus(a, b) {
+    return a + b;
+  },
+
+  times(a, b) {
+    return a * b;
+  },
+};
+
+const result = calculator.plus(2, 5);
+
+const age = 96;
+function calKrAge(ageOfForeigner) {
+  return ageOfForeigner + 2;
+}
+
+const krAge = calKrAge(age);
+console.log(krAge);
