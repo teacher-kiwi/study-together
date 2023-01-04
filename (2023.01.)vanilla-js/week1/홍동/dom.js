@@ -13,16 +13,34 @@ const hello = document.querySelectorAll('div h3:first-child');
 hello.forEach((item) => (item.innerText += ' Oh my god!'));
 
 // #3.3~5 Event
+// #3.6~8 CSS in Javascript
 function handleTitleClick() {
-  console.log('title was clicked');
+  // 매직 넘버 상수화
+  const RED = 'red';
+
+  // 깊은 복사를 하기 대문에 같은 메모리의 주소를 가지고 있지 않다.
+  //   let titleClassName = title.className;
+
+  // 얕은 복사를 하기 때문에 같은 메모리의 주소를 가지고 있다.
+  //   let titleClassList = title.classList;
+  //   if (titleClassList.contains(RED)) {
+  //     titleClassList.remove(RED);
+  //     titleClassList.add(NONE);
+  //     return;
+  //   }
+
+  //   titleClassList.remove(NONE);
+  //   titleClassList.add(RED);
+
+  title.classList.toggle(RED);
 }
 
 function handleTitleMouseEnter() {
-  title.style.color = 'red';
+  //   title.style.color = 'red';
 }
 
 function handleTitleMouseLeave() {
-  title.style.color = 'black';
+  //   title.style.color = 'black';
 }
 
 function handleWindowReszie() {
