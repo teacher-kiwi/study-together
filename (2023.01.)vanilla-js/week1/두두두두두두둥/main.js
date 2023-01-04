@@ -1,5 +1,9 @@
 const menu = document.querySelectorAll("a");
 
-function hoverTransition() {
-  menu.className = "hover";
+const login = menu[4];
+
+function loginEvent() {
+  alert("Register First");
 }
+
+login.addEventListener("click", loginEvent);
