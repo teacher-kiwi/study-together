@@ -32,14 +32,16 @@
 
 9. <a href="https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week2/브루노마르스/" target="_blank">브루노마르스</a>
 
-10. <a href="https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week2/옐로씨드/" target="_blank">옐로씨드</a>
+10. <a href="https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week2/손현준/" target="_blank">손현준</a>
 
-11. <a href="https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week2/죠이/" target="_blank">죠이</a>
+11. <a href="https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week2/옐로씨드/" target="_blank">옐로씨드</a>
 
-12. <a href="https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week2/주선/" target="_blank">주선</a>
+12. <a href="https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week2/죠이/" target="_blank">죠이</a>
 
-13. <a href="https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week2/폴짝스/" target="_blank">폴짝스</a>
+13. <a href="https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week2/주선/" target="_blank">주선</a>
 
-14. <a href="https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week2/호로롱/" target="_blank">호로롱</a>
+14. <a href="https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week2/폴짝스/" target="_blank">폴짝스</a>
 
-15. <a href="https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week2/홍동/" target="_blank">홍동</a>
+15. <a href="https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week2/호로롱/" target="_blank">호로롱</a>
+
+16. <a href="https://teacher-kiwi.github.io/study-together/(2023.01.)vanilla-js/week2/홍동/" target="_blank">홍동</a>
