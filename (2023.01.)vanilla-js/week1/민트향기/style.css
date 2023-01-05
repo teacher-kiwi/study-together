@@ -1,0 +1,10 @@
+#cursor {
+    position: absolute; font-size: 2em; color: #000000;
+    pointer-events: none; 
+    transform: translate(-50%, -50%);
+    transition: all 0.1s linear;
+}
+#wrap:hover + #cursor {
+    font-size: 1em; color: #f60e0e7a;
+}
+
