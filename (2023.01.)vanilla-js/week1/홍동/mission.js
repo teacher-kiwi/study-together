@@ -1,10 +1,5 @@
 import data from './data.js';
-
-const $topLeftBox = document.querySelector('.top-left');
-const $topRightBox = document.querySelector('.top-right');
-const $bottomLeftBox = document.querySelector('.bottom-left');
-const $bottomRightBox = document.querySelector('.bottom-right');
-const $video = document.querySelector('.video');
+import $ from './dom.js';
 
 function handleMouseEnter(event) {
   const {
@@ -14,10 +9,10 @@ function handleMouseEnter(event) {
   } = event;
   const { vedio } = data;
 
-  $video.innerHTML = vedio[music];
+  $('video').innerHTML = vedio[music];
 }
 
-$topLeftBox.addEventListener('mouseenter', handleMouseEnter);
-$topRightBox.addEventListener('mouseenter', handleMouseEnter);
-$bottomLeftBox.addEventListener('mouseenter', handleMouseEnter);
-$bottomRightBox.addEventListener('mouseenter', handleMouseEnter);
+$('top-left').addEventListener('mouseenter', handleMouseEnter);
+$('top-right').addEventListener('mouseenter', handleMouseEnter);
+$('bottom-left').addEventListener('mouseenter', handleMouseEnter);
+$('bottom-right').addEventListener('mouseenter', handleMouseEnter);
