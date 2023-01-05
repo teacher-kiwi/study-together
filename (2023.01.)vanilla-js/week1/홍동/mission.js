@@ -17,15 +17,7 @@ function handleMouseEnter(event) {
   $video.innerHTML = vedio[music];
 }
 
-function handleMouseLeave() {
-  $video.innerHTML = ``;
-}
-
 $topLeftBox.addEventListener('mouseenter', handleMouseEnter);
-$topLeftBox.addEventListener('mouseleave', handleMouseLeave);
 $topRightBox.addEventListener('mouseenter', handleMouseEnter);
-$topRightBox.addEventListener('mouseleave', handleMouseEnter);
 $bottomLeftBox.addEventListener('mouseenter', handleMouseEnter);
-$bottomLeftBox.addEventListener('mouseleave', handleMouseEnter);
 $bottomRightBox.addEventListener('mouseenter', handleMouseEnter);
-$bottomRightBox.addEventListener('mouseleave', handleMouseEnter);

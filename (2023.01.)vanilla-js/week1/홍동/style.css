@@ -1,14 +1,11 @@
 body {
   margin: 0;
   min-height: 100vh;
+  background-color: azure;
 }
 
 .nice-font {
   font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.red {
-  background-color: red;
 }
 
 .absolute {
@@ -16,29 +13,40 @@ body {
 }
 
 .top-left {
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 10px;
 }
 
 .top-right {
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
 }
 
 .bottom-left {
-  bottom: 0;
-  left: 0;
+  bottom: 10px;
+  left: 10px;
 }
 
 .bottom-right {
-  bottom: 0;
-  right: 0;
+  bottom: 10px;
+  right: 10px;
 }
 
 .box {
   width: 100px;
   height: 100px;
-  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px gray dashed;
+  color: gray;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.box:hover {
+  background-color: gray;
+  color: white;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .video {
