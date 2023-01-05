@@ -4,16 +4,17 @@ const $bottomLeftBox = document.querySelector('.bottom-left');
 const $bottomRightBox = document.querySelector('.bottom-right');
 const $video = document.querySelector('.video');
 
-function handleMouseEnter() {
-  $video.innerHTML = `<iframe
-        width="1120"
-        height="630"
-        src="https://www.youtube.com/embed/p_XdZdg9oGc/?"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>`;
+function handleMouseEnter(event) {
+  console.log(event);
+  //   $video.innerHTML = `<iframe
+  //         width="1120"
+  //         height="630"
+  //         src="https://www.youtube.com/embed/p_XdZdg9oGc/?"
+  //         title="YouTube video player"
+  //         frameborder="0"
+  //         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  //         allowfullscreen
+  //       ></iframe>`;
 }
 
 function handleMouseLeave() {
