@@ -5,9 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./style.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>자바스크립트</title>
   </head>
   <body>
+    <h1 id="title">JavaScript</h1>
+    <div>
+      <h1>1. 개요</h1>
+      <div id="gaeyo">
+        Ecma International의 프로토타입 기반의 프로그래밍 언어로, 스크립트
+        언어에 해당된다. 특수한 목적이 아닌 이상 모든 웹 브라우저에 인터프리터가
+        내장되어 있다. 오늘날 HTML, CSS와 함께 웹을 구성하는 요소 중 하나다.
+        HTML이 웹 페이지의 기본 구조를 담당하고, CSS가 디자인을 담당한다면
+        JavaScript는 클라이언트 단에서 웹 페이지가 동작하는 것을 담당한다. 웹
+        페이지를 자동차에 비유하자면, HTML은 자동차의 뼈대, CSS는 자동차의 외관,
+        JavaScript는 자동차의 동력이라고 볼 수 있다.
+      </div>
+      <hr />
+      <h1>2. 역사</h1>
+      <div id="history">
+        첫 탄생은 1995년 넷스케이프에서 근무하던 브랜든 아이크가 10일만에 설계한
+        것으로부터 시작한다. 처음에는 Mocha라는 이름이었지만 4달 만에
+        LiveScript라는 이름으로 개명하고 다시 3달 후에는 JavaScript라는 이름이
+        되어 오늘날까지 이어지고 있다. 'Java와 구문이 유사해서 이름을
+        JavaScript로 명명했다'는 표면상의 이유를 대지만 그 속은 Java의 유명세를
+        타서 묻어가려고 의도적으로 그렇게 작명한 것이다. 물론 무단으로 도용한
+        것은 아니고, 썬 마이크로시스템즈(지금은 오라클에 인수됨)에게 상표권 사용
+        허락을 받았다. # 오라클이 인수하면서 상표권도 오라클로 넘어갔는데,
+        소송으로 악명높은 오라클이 JavaScript는 딱히 손대지 않고 있다. 애초에
+        허락을 맡은 것이기도 하고 JavaScript가 워낙 널리 쓰이다보니 이제는 서로
+        각자의 유명세에 보탬이 되는 상부상조 관계이기 때문. JavaScript는 본래
+        넷스케이프 서버에서 애플리케이션을 제작하기 위한 고수준 추상화 언어로
+        설계되어 넷스케이프 내비게이터에 LiveScript 이름의 인터프리터를 넣었다.
+        그러나 JavaScript는 당시 기준에서 무리한 추상화를 시도했기 때문에 성능
+        문제가 많았다.
+      </div>
+      <hr />
+      <h1>3. DOM</h1>
+      <p id="dom">
+        Document Object Model / 문서 객체 모델 오늘날 JavaScript가 가장 널리
+        쓰이는 분야는 클라이언트용 인터페이스이다. 이 때 주로 JavaScript는 웹
+        브라우저에서 제공되는 DOM API를 사용하게 된다. JavaScript에서 HTML의
+        문서에 접근하는 API를 뜻하는 용어로 DOM이 등장하였다. 초창기 ECMA 5의
+        등장과 본격화 이전 브라우저 전쟁에서 알 수 있다시피 마이크로소프트는
+        자사만의 구현을 고집하였고, 이는 DOM의 구현이 각 벤더 사마다 다르다는
+        것을 의미했다. 위에서 말한 Internet Explorer 8 이하의 브라우저들이
+        addEventListener가 아닌 attachEvent 등 Microsoft 자사의 문법을
+        개발했다고 했는데, 이 메서드들은 모두 document object 아래에 있다.
+        다행히 이 문제점은 제2차 브라우저 전쟁 이후 구글이 마이크로소프트를
+        꺾음으로서 JavaScript 표준화로 점차 사라졌다. 그중에서도 DOM의 경우
+        ECMAScript 쪽에 의한 제정보다는 애플, 구글 등이 WHATWG(Web Hypertext
+        Application Technology Working Group)를 구성하고 HTML5 표준을 정한 것에
+        의해 표준화 되었다.
+      </p>
+    </div>
+    <hr />
+    <hr />
+    <div>
+      <h2>HTML로 교체</h2>
+      <button id="btn1">title 교체</button>
+      <button id="btn2">제목 교체</button>
+    </div>
+    <div>
+      <button id="btn3">1.개요 교체</button>
+      <button id="btn4">2. 역사 교체</button>
+      <button id="btn5">3. DOM 교체</button>
+    </div>
+    <div>
+      <button id="btn6">색상 변경</button>
+    </div>
     <script src="./main.js"></script>
   </body>
 </html>
