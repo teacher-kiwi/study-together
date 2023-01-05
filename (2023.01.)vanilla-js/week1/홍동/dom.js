@@ -1,8 +1,10 @@
-function $(className) {
+export function $(className) {
   return document.querySelector(`.${className}`);
 }
 
-export default $;
+export function $$(className) {
+  return document.querySelectorAll(`.${className}`);
+}
 
 // #3.0 The Document Object
 // document.title = 'Hello! JS!';
