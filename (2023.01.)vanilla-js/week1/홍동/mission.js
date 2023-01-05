@@ -1,5 +1,7 @@
 import data from './data.js';
-import $ from './dom.js';
+
+const $boxs = document.querySelectorAll('.box');
+const $video = document.querySelector('.video');
 
 function handleMouseEnter(event) {
   const {
@@ -9,10 +11,9 @@ function handleMouseEnter(event) {
   } = event;
   const { vedio } = data;
 
-  $('video').innerHTML = vedio[music];
+  $video.innerHTML = vedio[music];
 }
 
-$('top-left').addEventListener('mouseenter', handleMouseEnter);
-$('top-right').addEventListener('mouseenter', handleMouseEnter);
-$('bottom-left').addEventListener('mouseenter', handleMouseEnter);
-$('bottom-right').addEventListener('mouseenter', handleMouseEnter);
+$boxs.forEach((box) => {
+  box.addEventListener('mouseenter', handleMouseEnter);
+});
