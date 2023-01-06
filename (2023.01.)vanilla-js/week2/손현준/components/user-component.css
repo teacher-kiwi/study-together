@@ -1,0 +1,24 @@
+.SHJ-component {
+    justify-content : space-between;
+}
+
+.SHJ-component,
+.SHJ-component__column {
+    display : flex;
+    align-items : center;
+}
+
+.SHJ-component__avatar {
+    width : 70px;
+    height : 70px;
+    border-radius : 30px;
+    margin-right : 20px;
+}
+
+.SHJ-component__avatar2 {
+    width : 150px;
+    height : 150px;
+    border-radius : 75px;
+    margin-right : 20px;
+}
+
