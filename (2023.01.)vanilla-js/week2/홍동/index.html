@@ -8,10 +8,15 @@
     <title>Momentum App</title>
   </head>
   <body>
-    <div id="login-form">
-      <input type="text" placeholder="당신의 이름은 무엇입니까?" />
-      <button>로그인</button>
-    </div>
+    <form id="login-form">
+      <input
+        required
+        maxlength="15"
+        type="text"
+        placeholder="당신의 이름은 무엇입니까?"
+      />
+      <input type="submit" value="로그인" />
+    </form>
     <script src="./main.js"></script>
   </body>
 </html>
