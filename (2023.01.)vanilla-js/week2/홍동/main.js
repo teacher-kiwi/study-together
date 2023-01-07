@@ -9,6 +9,7 @@ function handleSubmitLoginBtn(event) {
   loginForm.classList.add(HIDDEN_CLASSNAME);
 
   const username = loginInput.value;
+  localStorage.setItem('username', username);
   greeting.innerText = `반가워요! ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
