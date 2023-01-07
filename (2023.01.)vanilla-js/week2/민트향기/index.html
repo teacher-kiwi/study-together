@@ -5,6 +5,7 @@
     <title>Momentum EDU</title>
   </head>
   <body>
+    <h2 id="clock">00:00:00</h2>
     <form  id="login-form" class="hidden" >
       <input 
         required maxlength="15"
@@ -14,8 +15,12 @@
       <input type="submit" value="Log In"/>
     </form>
     <h1 class="hidden" id="greeting"></h1>
-    <h2 id="clock">00:00:00</h2>
-    <div class="quote">
+    <form id="todo-form">
+      <input type="text" placeholder="Write a Todo and Press Enter" required >
+    </form>
+    <ul id="todo-list">
+    </ul>
+    <div id="quote">
       <span></span>
       <span></span>
     </div>
@@ -23,5 +28,6 @@
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/backgrounds.js"></script>
+    <script src="js/todo.js"></script>
   </body>
 </html>
