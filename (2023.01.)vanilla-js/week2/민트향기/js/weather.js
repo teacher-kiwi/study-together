@@ -3,7 +3,7 @@ const API_KEY = "3c2ea7ac67710ac4e468ffa01235fb44"
 function onGeoOK(position) {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
-    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=${API_KEY}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${API_KEY}&units=metric`;
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -13,6 +13,7 @@ function onGeoOK(position) {
             weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
     });
 }
+
 
 function onGeoError() {
     alert("Error")
