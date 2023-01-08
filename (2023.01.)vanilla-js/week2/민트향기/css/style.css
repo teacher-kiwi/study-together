@@ -1,3 +1,63 @@
 .hidden {
    display: none;
 }
+
+body{
+   padding-top:300px;
+   font-family: 'Baloo Tammudu 2', 'Noto Sans KR', sans-serif;
+}
+
+#bgImage{
+   position:absolute;
+   left:0;
+   top:0;
+   max-width:100%;
+   min-width:1880px;;
+   max-height:1400px;
+   min-height:1200px;
+   z-index:-1;
+   filter: brightness(50%);
+}
+
+#clock {
+   text-align: center;
+   height:200px;
+   font-size:8rem;
+   margin:10px;
+   color: white;
+}
+
+form {
+   text-align: center;
+}
+#todo-list {
+   text-align: center;
+   color: white;
+}
+
+#quote {
+   text-align: center;
+   position: fixed;
+   color: white;
+   bottom: 40px;
+   margin-left: 0px;
+   font-size: 1rem;
+   font-weight: 200;
+}
+
+#greeting {
+   text-align : center;
+   color: white;
+   font-weight: 600;
+   font-size: 2rem;
+   margin-top:0px
+}
+
+#weather {
+   position:fixed;
+   top:20px;
+   right:35px;
+   color: white;
+   font-size:0.9rem;
+   font-weight:700;
+}
