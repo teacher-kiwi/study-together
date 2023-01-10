@@ -7,21 +7,30 @@
     <link href="./style.css" rel="stylesheet" />
     <title>Momentum App</title>
   </head>
-  <body>
-    <form id="login-form" class="hidden">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="당신의 이름은 무엇입니까?"
-      />
-      <input type="submit" value="로그인" />
-    </form>
-    <h2 id="clock">00:00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <div id="quote">
-      <span></span>
-      <span></span>
+  <body class="white">
+    <div class="layout">
+      <form id="login-form" class="hidden">
+        <input
+          required
+          maxlength="15"
+          type="text"
+          placeholder="당신의 이름은 무엇입니까?"
+        />
+        <input type="submit" value="로그인" />
+      </form>
+      <h2 id="clock">00:00:00</h2>
+      <h1 id="greeting" class="hidden"></h1>
+      <div id="quote">
+        <span></span>
+        <span></span>
+      </div>
+      <div id="theme">
+        <div class="theme-btn" data-theme="white">White</div>
+        <div class="theme-btn" data-theme="black">Black</div>
+        <div class="theme-btn" data-theme="green">Green</div>
+        <div class="theme-btn" data-theme="blue">Blue</div>
+        <div class="theme-btn" data-theme="red">Red</div>
+      </div>
     </div>
     <script src="./js/clock.js"></script>
     <script src="./js/greetings.js"></script>
