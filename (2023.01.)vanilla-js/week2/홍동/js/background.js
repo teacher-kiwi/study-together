@@ -7,6 +7,11 @@ function handleClickThemeBtn({ target }) {
   } = target;
 
   $body.className = theme;
+  saveTheme(theme);
+}
+
+function saveTheme(theme) {
+  localStorage.setItem('theme', theme);
 }
 
 $themeBtn.forEach((btn) => btn.addEventListener('click', handleClickThemeBtn));
