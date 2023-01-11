@@ -1,13 +1,42 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./style.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>Baseball Game</title>
   </head>
   <body>
+    <span id="trackpointer"></span>
+    <fieldset id="user">
+      <div></div>
+    </fieldset>
+    <h1>야구 게임</h1>
+    <div class="description"></div>
+    <p>
+      1. 3자리 숫자를 추리하는 게임이다.
+      <br />
+      2. 사용되는 숫자는 0에서 9까지 서로 다른 숫자이다. <br />3. 숫자는 맞지만 위치가 틀렸을 때는 볼.
+      <br />4. 숫자와 위치가 전부 맞으면 스트라이크. 숫자와 위치가 전부 틀리면
+      아웃.
+    </p>
+    <fieldset class="login hidden">
+      <form>이름 : <input type="text" /> <button>제출</button></form>
+    </fieldset>
+    <fieldset class="game hidden">
+      <h3><span>정답: </span><span>? ? ?</span></h3>
+      <ol id="answerlist"></ol>
+    </fieldset>
+    <fieldset>
+      <form id="useranswer">
+        <input type="text"><button>제출</button>
+      </form>
+    </fieldset>
+    </div>
     <script src="./main.js"></script>
+    <script src="./track.js"></script>
+    <script src="./answer.js"></script>
+    <script src="./useranswer.js"></script>
   </body>
 </html>
