@@ -32,3 +32,39 @@ body {
 .quote .content {
   font-size: 80px;
 }
+
+.hidden {
+  display: none;
+}
+
+#name {
+  font-size: 80pt;
+}
+
+.fade-in {
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#login-form input {
+  border: 1px solid gray;
+  border-radius: 4px;
+  background: transparent;
+}
+
+#login-form button {
+  width: 50px;
+  height: 20px;
+  border: none;
+  background-color: #4686ff;
+  color: white;
+  border-radius: 4px;
+}
