@@ -1,3 +1,5 @@
+import { showTaro } from './taro.js';
+
 //form 전체
 const nameForm = document.querySelector(".nameForm");
 //form의 input(이름을 입력할)
@@ -25,8 +27,9 @@ function nameSubmit(event){
   showWelcome(name);
 }
 
-function showWelcome(event){
-  sayWelcome.innerText = `Welcome to FortuneTeller, ${event}`;
+function showWelcome(name){
+  sayWelcome.innerText = `Welcome to FortuneTeller, ${name}`;
   sayWelcome.classList.remove(HIDDEN);
+  showTaro();
 }
 

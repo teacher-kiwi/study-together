@@ -1,3 +1,4 @@
+const HIDDEN = "hidden";
 const chooseSentence = document.querySelector(".chooseSentence");
 const cardArray = [['card0', "https://t1.daumcdn.net/cfile/tistory/26286D4C590089210C"], 
 ['card1', "https://t1.daumcdn.net/cfile/tistory/27228F4A5882FEBB2A"],
@@ -18,14 +19,14 @@ const fortuneTeller = [
 const tellFortune = document.createElement("p");
 const basciAddress = "http://l.newslab.co.kr/views/unsechingu/tarot/card_back.png"
 
-if (savedName !==null){
+//name.js에 가져다 사용할 함수
+export function showTaro(){
   for(let i=0; i<cardArray.length; i++){
     const taroImage = document.querySelector(`.card${i}`);
     taroImage.classList.remove(HIDDEN);
   }
   chooseSentence.classList.remove(HIDDEN);
 }
-
 
 function changeImage(clickCard, address){
   if(clickCard.src === basciAddress){
@@ -54,4 +55,3 @@ cardArray.forEach(([card, address])=>{
   //clickCard.addEventListener("click", (element) => {console.log(element)});
   clickCard.addEventListener("click", () => clickTell(clickCard, index));
 })
-
