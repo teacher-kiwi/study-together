@@ -13,6 +13,16 @@ function saveTheme(theme) {
   localStorage.setItem('theme', theme);
 }
 
+function handleLoadWindow() {
+  loadTheme();
+}
+
+function loadTheme() {
+  const theme = localStorage.getItem('theme');
+  $('body').className = theme;
+}
+
 $$('.theme-btn').forEach((btn) =>
-  btn.addEventListener('click', handleClickThemeBtn)
+  btn.addEventListener('click', handleLoadWindow)
 );
+window.addEventListener('load', loadTheme);
