@@ -1,0 +1,31 @@
+body{
+  background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+  background-repeat: no-repeat;
+  font-family:serif;
+  font-weight: bold;
+}
+.hidden{
+  display:none;
+}
+
+#clock{
+  margin-bottom: 80px;
+}
+.taros{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around; 
+}
+.image{
+  width: 200px;
+  height: 300px;
+}
+.chooseSentence p{
+  margin-top: 50px;
+  text-align: center;
+  font-size: 30px;
+}
+p{
+  text-align: center;
+  font-size:20px;
+}
