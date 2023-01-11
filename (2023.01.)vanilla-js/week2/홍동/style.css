@@ -4,11 +4,37 @@
 }
 
 body {
-  background-image: url('https://source.unsplash.com/random/1920x1080?yellow');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 100vh;
+  color: white;
+  text-shadow: 1px 1px 0px black;
+}
+
+.layout {
+  background-color: rgba(0, 0, 0, 0.3);
+  min-height: 100vh;
+}
+
+.white {
+  background-image: url('https://source.unsplash.com/random/1920x1080?white');
+}
+
+.black {
+  background-image: url('https://source.unsplash.com/random/1920x1080?black');
+}
+
+.blue {
+  background-image: url('https://source.unsplash.com/random/1910x1080?blue');
+}
+
+.red {
+  background-image: url('https://source.unsplash.com/random/1910x1080?red');
+}
+
+.green {
+  background-image: url('https://source.unsplash.com/random/1920x1080?green');
 }
 
 .hidden {
