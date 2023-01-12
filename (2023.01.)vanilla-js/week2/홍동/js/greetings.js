@@ -10,6 +10,7 @@ function handleSubmitLoginBtn(event) {
   const username = $('.login-form-name').value;
   saveUsername(username);
   paintGreetings(username);
+  $('.login-form-name').value = '';
 }
 
 function saveUsername(username) {
@@ -26,7 +27,17 @@ function handleLoadWindow() {
 function paintGreetings(username) {
   $('#greeting').innerText = `${username}님 반가워요!`;
   $('#greeting').classList.remove(HIDDEN_CLASSNAME);
+  $('#logout').classList.remove(HIDDEN_CLASSNAME);
+}
+
+function handleClickLogout() {
+  localStorage.removeItem(USERNAME_KEY);
+
+  $('#login-form').classList.remove(HIDDEN_CLASSNAME);
+  $('#greeting').classList.add(HIDDEN_CLASSNAME);
+  $('#logout').classList.add(HIDDEN_CLASSNAME);
 }
 
 window.addEventListener('load', handleLoadWindow);
 $('#login-form').addEventListener('submit', handleSubmitLoginBtn);
+$('#logout').addEventListener('click', handleClickLogout);
