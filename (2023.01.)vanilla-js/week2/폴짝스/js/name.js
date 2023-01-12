@@ -1,4 +1,4 @@
-import { showTaro } from './taro.js';
+import { showTaro, shuffleIndex } from './taro2.js';
 
 //form 전체
 const nameForm = document.querySelector(".nameForm");
@@ -30,6 +30,7 @@ function nameSubmit(event){
 function showWelcome(name){
   sayWelcome.innerText = `Welcome to FortuneTeller, ${name}`;
   sayWelcome.classList.remove(HIDDEN);
+  shuffleIndex();
   showTaro();
 }
 

@@ -19,6 +19,7 @@ const fortuneTeller = [
 const tellFortune = document.createElement("p");
 const basciAddress = "http://l.newslab.co.kr/views/unsechingu/tarot/card_back.png"
 
+
 //name.js에 가져다 사용할 함수
 export function showTaro(){
   for(let i=0; i<cardArray.length; i++){
