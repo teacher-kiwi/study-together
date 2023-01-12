@@ -57,6 +57,13 @@ body {
   text-shadow: none;
   padding: 5px 10px;
   border-radius: 20px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.selected-theme {
+  background-color: rgb(59, 59, 59);
+  color: rgb(233, 233, 233);
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 #quote {

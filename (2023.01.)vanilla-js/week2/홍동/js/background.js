@@ -7,6 +7,12 @@ function handleClickThemeBtn({ target }) {
 
   $('body').className = theme;
   saveTheme(theme);
+  toggleSelectedTheme(target);
+}
+
+function toggleSelectedTheme(target) {
+  $('.selected-theme').classList.toggle('selected-theme');
+  target.classList.toggle('selected-theme');
 }
 
 function saveTheme(theme) {
@@ -20,6 +26,14 @@ function handleLoadWindow() {
 function loadTheme() {
   const theme = localStorage.getItem('theme');
   $('body').className = theme;
+  const selectedBtn = findSelectedBtn(theme);
+  selectedBtn.classList.toggle('selected-theme');
+}
+
+function findSelectedBtn(theme) {
+  return [...$$('.theme-btn')].filter((btn) => {
+    return theme === btn.dataset.theme;
+  })[0];
 }
 
 $$('.theme-btn').forEach((btn) =>
