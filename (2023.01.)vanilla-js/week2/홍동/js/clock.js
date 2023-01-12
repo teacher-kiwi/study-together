@@ -4,8 +4,7 @@ function getClock() {
   const date = new Date();
   const hours = setPadStart(date.getHours());
   const minutes = setPadStart(date.getMinutes());
-  const seconds = setPadStart(date.getSeconds());
-  clock.innerText = `${hours}:${minutes}:${seconds}`;
+  clock.innerText = `${hours}:${minutes}`;
 }
 
 function setPadStart(number) {

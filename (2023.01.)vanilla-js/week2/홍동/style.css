@@ -79,3 +79,19 @@ body {
 #quote :last-child {
   font-size: 14px;
 }
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#clock {
+  margin-bottom: 20px;
+  font-size: 120px;
+  letter-spacing: 20px;
+  text-shadow: 3px 3px 3px black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
