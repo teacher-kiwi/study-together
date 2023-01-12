@@ -28,7 +28,6 @@ export function shuffleIndex(){
   arr.sort(()=>Math.random()-0.5);
   console.log(arr);
 
-  
   arr.forEach(element => {
     const clickCard = document.querySelector(`.card${element}`);
     //(event)를 (clickCard, i)로 바꾼다고 생각해보자
@@ -49,7 +48,6 @@ export function showTaro(){
 }
 
 function changeImage(clickCard, element, arr){
-  console.log(element);
   if(clickCard.src === basciAddress){
     clickCard.src = addressArray[arr.indexOf(element)];
   }else{
