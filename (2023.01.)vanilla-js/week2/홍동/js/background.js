@@ -23,6 +23,6 @@ function loadTheme() {
 }
 
 $$('.theme-btn').forEach((btn) =>
-  btn.addEventListener('click', handleLoadWindow)
+  btn.addEventListener('click', handleClickThemeBtn)
 );
-window.addEventListener('load', loadTheme);
+window.addEventListener('load', handleLoadWindow);
