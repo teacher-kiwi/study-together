@@ -21,6 +21,9 @@ function compareAnswer(e) {
   printAnswer();
   resetAnswer();
   if (strike === 3) {
+    localStorage.removeItem(currentUsername);
+    userWin++;
+    localStorage.setItem(currentUsername, userWin);
     endGame();
   }
   strike = 0;
@@ -54,6 +57,7 @@ function endGame() {
   gameForm.querySelector('h3 span:last-child').innerText =
     userAnswerString + '  축하합니다.';
   alert('정답입니다. 축하합니다~~^^');
+  userStatus.innerText = `${currentUsername} 님, 승리 횟수 ${userWin}번 입니다.`;
   location.reload();
 }
 

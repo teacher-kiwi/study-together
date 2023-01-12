@@ -5,8 +5,8 @@ function trackPoint(e) {
   trackPointer.style.left = e.x + 'px';
 }
 
-if (savedUsername != null) {
-  trackPointer.innerText = `Hello, ${savedUsername} :) `;
+if (currentUsername != null) {
+  trackPointer.innerText = `Hello, ${currentUsername} :) `;
 }
 
 window.addEventListener('mousemove', trackPoint);
