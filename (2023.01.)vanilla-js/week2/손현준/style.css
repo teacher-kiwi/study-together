@@ -1,0 +1,15 @@
+@import "components/user-component.css";
+
+@import "screens/home.css";
+
+body {
+    height : 100vh;
+}
+
+h5 {
+    color : blue;
+}
+
+.SHJ-component__title2 {
+    color : tomato;
+}

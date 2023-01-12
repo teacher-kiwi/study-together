@@ -4,10 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./style.css" rel="stylesheet" />
-    <title>Document</title>
+    <link href="./style.css" rel="stylesheet"/>
+    <title>FortuneTeller</title>
   </head>
   <body>
-    <script src="./main.js"></script>
+    <form class="nameForm hidden">
+      <input required type="text" placeholder="Please write your name">
+      <input type="submit" value="Click">
+    </form>
+    <h1 class="sayWelcome hidden"></h1>
+    <h1 id="clock">00:00:00</h1>
+    <div class="taros">
+      <img src="https://st.depositphotos.com/1363007/1810/i/600/depositphotos_18108561-stock-photo-card-back.jpg" alt="taroBehind" class="image card0 hidden">
+      <img src="https://st.depositphotos.com/1363007/1810/i/600/depositphotos_18108561-stock-photo-card-back.jpg" alt="taroBehind" class="image card1 hidden">
+      <img src="https://st.depositphotos.com/1363007/1810/i/600/depositphotos_18108561-stock-photo-card-back.jpg" alt="taroBehind" class="image card2 hidden">
+      <img src="https://st.depositphotos.com/1363007/1810/i/600/depositphotos_18108561-stock-photo-card-back.jpg" alt="taroBehind" class="image card3 hidden">
+      <img src="https://st.depositphotos.com/1363007/1810/i/600/depositphotos_18108561-stock-photo-card-back.jpg" alt="taroBehind" class="image card4 hidden">
+      <img src="https://st.depositphotos.com/1363007/1810/i/600/depositphotos_18108561-stock-photo-card-back.jpg" alt="taroBehind" class="image card5 hidden">
+    </div>
+    <div class="chooseSentence hidden">
+      <p>타로 카드 중 한 장을 고르시오.</p>
+    </div>
+    <script type="module" src="js/name.js"></script>
+    <script src="js/clock.js"></script>
+    <script type="module" src="js/taro2.js"></script>
   </body>
 </html>
