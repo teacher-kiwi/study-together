@@ -58,3 +58,17 @@ body {
   padding: 5px 10px;
   border-radius: 20px;
 }
+
+#quote {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  display: grid;
+  row-gap: 10px;
+  justify-items: center;
+}
+
+#quote :last-child {
+  font-size: 14px;
+}
