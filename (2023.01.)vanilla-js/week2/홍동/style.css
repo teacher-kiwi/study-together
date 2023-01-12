@@ -95,3 +95,10 @@ body {
   text-shadow: 3px 3px 3px black;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+#clock .clock-day {
+  font-size: 24px;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 0px black;
+  text-align: center;
+}
