@@ -2,7 +2,7 @@ const userAnswerForm = document.querySelector('#useranswer');
 const userAnswerInput = userAnswerForm.querySelector('input');
 const userAnswerList = document.querySelector('#answerlist');
 let userArray = [];
-ball = 0;
+ball = 0; // let으로 정의하면 작동 안됨.. 왜지? let은 재정의 가능한 변수 아닌가?
 strike = 0;
 out = 0;
 
@@ -12,7 +12,7 @@ function compareAnswer(e) {
   userArray.forEach((number, index) => {
     if (number == answerArray[index]) {
       strike++;
-    } else if (number in userArray) {
+    } else if (answerArray.includes(number)) {
       ball++;
     } else {
       out++;
@@ -21,6 +21,9 @@ function compareAnswer(e) {
   printAnswer();
   resetAnswer();
   if (strike === 3) {
+    localStorage.removeItem(currentUsername);
+    userWin++;
+    localStorage.setItem(currentUsername, userWin);
     endGame();
   }
   strike = 0;
@@ -32,7 +35,7 @@ function makeArray() {
   userAnswerString = userAnswerInput.value;
   if (userAnswerString.length === 3) {
     for (i = 0; i < 3; i++) {
-      userArray.push(userAnswerString[i]);
+      userArray.push(parseInt(userAnswerString[i]));
     }
   } else {
     alert('3자리 숫자만 입력해주세요.');
@@ -54,6 +57,7 @@ function endGame() {
   gameForm.querySelector('h3 span:last-child').innerText =
     userAnswerString + '  축하합니다.';
   alert('정답입니다. 축하합니다~~^^');
+  userStatus.innerText = `${currentUsername} 님, 승리 횟수 ${userWin}번 입니다.`;
   location.reload();
 }
 
