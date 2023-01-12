@@ -12,6 +12,7 @@ function onLoginBtn(event) {
 }
 
 function paintGreeting(username) {
+  loginForm.classList.add("hidden");
   windowName.classList.remove("hidden");
   windowName.classList.add("fade-in");
   windowName.innerText = `Hello ${username}`;
