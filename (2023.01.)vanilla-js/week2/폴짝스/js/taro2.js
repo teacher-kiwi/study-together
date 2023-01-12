@@ -17,7 +17,7 @@ const fortuneTeller = [
 ]
 
 const tellFortune = document.createElement("p");
-const basciAddress = "http://l.newslab.co.kr/views/unsechingu/tarot/card_back.png"
+const basciAddress = "https://st.depositphotos.com/1363007/1810/i/600/depositphotos_18108561-stock-photo-card-back.jpg";
 
 //addressArray의 dindex 섞기
 export function shuffleIndex(){
