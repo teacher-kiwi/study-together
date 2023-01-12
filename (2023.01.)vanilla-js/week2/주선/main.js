@@ -8,7 +8,7 @@ const HIDDEN_CLASSNAME = 'hidden';
 const USERNAME_KEY = 'username';
 
 let currentUsername = localStorage.getItem('currentUsername');
-let userWin;
+let userWin = 0;
 
 function submitUsername(e) {
   e.preventDefault();
@@ -28,10 +28,14 @@ function submitUsername(e) {
 if (currentUsername === null) {
   loginFieldset.classList.remove(HIDDEN_CLASSNAME);
   loginForm.addEventListener('submit', submitUsername);
-  userwin = 0;
 } else {
   gameForm.classList.remove(HIDDEN_CLASSNAME);
   userwin = localStorage.getItem(currentUsername);
+  userStatus.innerText = `${currentUsername} 님, 승리 횟수 ${localStorage.getItem(
+    currentUsername
+  )}번 입니다.`;
 }
 
-userStatus.innerText = `${currentUsername} 님, 승리 횟수 ${userWin}번 입니다.`;
+function onlyNumber(obj) {
+  obj.value = obj.value.replace(/[^0-9]/g, '');
+}
