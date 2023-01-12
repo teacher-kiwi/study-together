@@ -45,10 +45,6 @@ body {
   background-image: url('https://source.unsplash.com/random/1920x1080?green');
 }
 
-.hidden {
-  display: none;
-}
-
 #theme {
   position: absolute;
   bottom: 10px;
@@ -111,7 +107,7 @@ body {
   text-align: center;
 }
 
-#login-form {
+.login-form {
   display: grid;
   grid-template-columns: auto auto;
   column-gap: 20px;
@@ -128,4 +124,12 @@ body {
   background-color: rgb(252, 252, 252);
   border-radius: 10px;
   cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#greeting {
+  font-size: 24px;
 }

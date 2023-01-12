@@ -1,29 +1,32 @@
-const loginForm = document.querySelector('#login-form');
-const loginInput = document.querySelector('#login-form input');
-const greeting = document.querySelector('#greeting');
+import { $ } from './libs/dom.js';
 
 const HIDDEN_CLASSNAME = 'hidden';
 const USERNAME_KEY = 'username';
 
 function handleSubmitLoginBtn(event) {
   event.preventDefault();
-  loginForm.classList.add(HIDDEN_CLASSNAME);
+  $('#login-form').classList.add(HIDDEN_CLASSNAME);
 
-  const username = loginInput.value;
+  const username = $('.login-form-name').value;
+  saveUsername(username);
+  paintGreetings(username);
+}
+
+function saveUsername(username) {
   localStorage.setItem(USERNAME_KEY, username);
-  paintGreetings();
+}
+
+function handleLoadWindow() {
+  const savedUsername = localStorage.getItem(USERNAME_KEY);
+  if (savedUsername) return paintGreetings(savedUsername);
+
+  $('#login-form').classList.remove(HIDDEN_CLASSNAME);
 }
 
 function paintGreetings(username) {
-  greeting.innerText = `반가워요! ${username}`;
-  greeting.classList.remove(HIDDEN_CLASSNAME);
+  $('#greeting').innerText = `${username}님 반가워요!`;
+  $('#greeting').classList.remove(HIDDEN_CLASSNAME);
 }
 
-const savedUsername = localStorage.getItem(USERNAME_KEY);
-
-if (!savedUsername) {
-  loginForm.classList.remove(HIDDEN_CLASSNAME);
-  loginForm.addEventListener('submit', handleSubmitLoginBtn);
-} else {
-  paintGreetings(savedUsername);
-}
+window.addEventListener('load', handleLoadWindow);
+$('#login-form').addEventListener('submit', handleSubmitLoginBtn);
