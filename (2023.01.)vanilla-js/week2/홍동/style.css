@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  color: white;
+  text-shadow: 1px 1px 0px black;
+}
+
+.layout {
+  background-color: rgba(0, 0, 0, 0.3);
+  min-height: 100vh;
+}
+
+.white {
+  background-image: url('https://source.unsplash.com/random/1920x1080?white');
+}
+
+.black {
+  background-image: url('https://source.unsplash.com/random/1920x1080?black');
+}
+
+.blue {
+  background-image: url('https://source.unsplash.com/random/1910x1080?blue');
+}
+
+.red {
+  background-image: url('https://source.unsplash.com/random/1910x1080?red');
+}
+
+.green {
+  background-image: url('https://source.unsplash.com/random/1920x1080?green');
+}
+
+#theme {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  display: flex;
+}
+
+.theme-btn {
+  margin-right: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  text-shadow: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.selected-theme {
+  background-color: rgb(59, 59, 59);
+  color: rgb(233, 233, 233);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+#quote {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  display: grid;
+  row-gap: 10px;
+  justify-items: center;
+}
+
+#quote :last-child {
+  font-size: 14px;
+}
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#clock {
+  margin-bottom: 20px;
+  font-size: 120px;
+  letter-spacing: 20px;
+  text-shadow: 3px 3px 3px black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#clock .clock-day {
+  font-size: 24px;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 0px black;
+  text-align: center;
+}
+
+.login-form {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 20px;
+}
+
+.login-form input {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.login-form-name {
+  padding: 10px 40px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.login-form-submit {
+  padding: 10px 20px;
+  background-color: rgb(252, 252, 252);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#greeting {
+  font-size: 24px;
+}
+
+#logout {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  background-color: white;
+  color: black;
+  text-shadow: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
