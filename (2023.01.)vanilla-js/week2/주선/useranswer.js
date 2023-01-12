@@ -2,7 +2,7 @@ const userAnswerForm = document.querySelector('#useranswer');
 const userAnswerInput = userAnswerForm.querySelector('input');
 const userAnswerList = document.querySelector('#answerlist');
 let userArray = [];
-ball = 0;
+ball = 0; // let으로 정의하면 작동 안됨.. 왜지? let은 재정의 가능한 변수 아닌가?
 strike = 0;
 out = 0;
 
@@ -12,7 +12,7 @@ function compareAnswer(e) {
   userArray.forEach((number, index) => {
     if (number == answerArray[index]) {
       strike++;
-    } else if (number in userArray) {
+    } else if (answerArray.includes(number)) {
       ball++;
     } else {
       out++;
@@ -32,7 +32,7 @@ function makeArray() {
   userAnswerString = userAnswerInput.value;
   if (userAnswerString.length === 3) {
     for (i = 0; i < 3; i++) {
-      userArray.push(userAnswerString[i]);
+      userArray.push(parseInt(userAnswerString[i]));
     }
   } else {
     alert('3자리 숫자만 입력해주세요.');
