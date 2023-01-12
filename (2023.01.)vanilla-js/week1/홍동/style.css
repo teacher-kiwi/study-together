@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: azure;
+}
+
+.nice-font {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.top-right {
+  top: 10px;
+  right: 10px;
+}
+
+.bottom-left {
+  bottom: 10px;
+  left: 10px;
+}
+
+.bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px gray dashed;
+  color: gray;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.box:hover {
+  background-color: gray;
+  color: white;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.video {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

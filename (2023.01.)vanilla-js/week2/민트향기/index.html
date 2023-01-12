@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./style.css" rel="stylesheet" />
-    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Momentum EDU</title>
   </head>
   <body>
-    <script src="./main.js"></script>
+    <h2 id="clock">00:00:00</h2>
+    <form  id="login-form" class="hidden" >
+      <input 
+        required maxlength="15"
+        type="text"
+        placeholder="이름이 어떻게 되나요??"
+      />
+      <input type="submit" value="Log In"/>
+    </form>
+    <h1 class="hidden" id="greeting"></h1>
+    <form id="todo-form">
+      <input type="text" placeholder="해야할 일을 써주세요." required >
+    </form>
+    <ul id="todo-list">
+    </ul>
+    <div id="quote">
+      <span></span>
+      <span></span>
+    </div>
+    <div id="weather">
+      <span></span>
+      <span></span>
+    </div>
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/backgrounds.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
   </body>
 </html>

@@ -5,10 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./style.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>DOM과 Event 연습</title>
   </head>
   <body>
-    test page
+    <div id="mouseText">
+      <p>나는 마우스 따라다니는 귀신~👻</p>
+      <span></span>
+    </div>
+    <p>현재 타이틀은 "<span id="titleSpan"></span>"</p>
+    <button id="titleChangeBtn">나를 눌러 타이틀을 변경해봐!</button>
+
+    <br />
+    <br />
+
+    <p>창크기: <span id="windowX"></span>px X <span id="windowY"></span>px</p>
+
+    <br />
+
+    <p>아래 글을 복사해봐!</p>
+    <input value="간장 공장 공장장" disabled />
+    <input id="pasteInput" placeholder="여기에 붙여넣어!" hidden />
+
+    <br />
+    <br />
+
+    <p>배경색을 바꿔보자!</p>
+    <input id="colorPicker" type="color" />
     <script src="./main.js"></script>
   </body>
 </html>
