@@ -36,7 +36,5 @@ function findSelectedBtn(theme) {
   })[0];
 }
 
-$$('.theme-btn').forEach((btn) =>
-  btn.addEventListener('click', handleClickThemeBtn)
-);
+$('#theme').addEventListener('click', handleClickThemeBtn);
 window.addEventListener('load', handleLoadWindow);
