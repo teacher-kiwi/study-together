@@ -113,6 +113,10 @@ body {
   column-gap: 20px;
 }
 
+.login-form input {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 .login-form-name {
   padding: 10px 40px;
   text-align: center;

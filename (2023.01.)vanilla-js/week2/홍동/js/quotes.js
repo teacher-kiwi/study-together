@@ -5,4 +5,4 @@ const randomNum = Math.floor(Math.random() * quotes.length);
 const { quote, author } = quotes[randomNum];
 
 $('#quote span:first-child').innerText = quote;
-$('#quote span:last-child').innerText = author;
+$('#quote span:last-child').innerText = `- ${author} -`;
