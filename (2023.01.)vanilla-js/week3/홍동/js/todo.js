@@ -5,7 +5,7 @@ const $todoInput = $('#todo-form input');
 function paintTodo(todo) {
   $('#todo-list').insertAdjacentHTML(
     'beforeend',
-    `<li><span>${todo}</span></li>`
+    `<li><span>${todo}</span><button class="del-button">X</button></li>`
   );
 }
 
@@ -16,4 +16,11 @@ function handleSubmitTodo(event) {
   paintTodo(newTodo);
 }
 
+function handleClickDelete({ target }) {
+  if (!target.matches('#todo-list li .del-button')) return;
+
+  target.parentElement.remove();
+}
+
 $('#todo-form').addEventListener('submit', handleSubmitTodo);
+$('#todo-list').addEventListener('click', handleClickDelete);
