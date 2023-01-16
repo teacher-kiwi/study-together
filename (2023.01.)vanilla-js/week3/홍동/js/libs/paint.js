@@ -8,18 +8,18 @@ export function paintGreetings(username) {
   $('#logout').classList.remove(HIDDEN_CLASSNAME);
 }
 
-export function paintTodo(todo) {
+export function paintTodo({ todo, id }) {
   $('#todo-list').insertAdjacentHTML(
     'beforeend',
-    `<li><span>${todo}</span><button class="del-button">X</button></li>`
+    `<li id=${id}><span>${todo}</span><button class="del-button">X</button></li>`
   );
 }
 
 export function paintTodos(todos) {
   const todosLi = todos
     .map(
-      (todo) =>
-        `<li><span>${todo}</span><button class="del-button">X</button></li>`
+      ({ todo, id }) =>
+        `<li id=${id}><span>${todo}</span><button class="del-button">X</button></li>`
     )
     .join('');
 

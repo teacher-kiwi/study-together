@@ -11,9 +11,10 @@ function saveTodos(newTodo) {
 function handleSubmitTodo(event) {
   event.preventDefault();
   const newTodo = $todoInput.value;
+  const id = Date.now();
   $todoInput.value = '';
-  paintTodo(newTodo);
-  saveTodos(newTodo);
+  paintTodo({ todo: newTodo, id });
+  saveTodos({ todo: newTodo, id });
 }
 
 function handleClickDelete({ target }) {
@@ -22,8 +23,5 @@ function handleClickDelete({ target }) {
   target.parentElement.remove();
 }
 
-function handleLoadWindow() {}
-
-window.addEventListener('load', handleLoadWindow);
 $('#todo-form').addEventListener('submit', handleSubmitTodo);
 $('#todo-list').addEventListener('click', handleClickDelete);
