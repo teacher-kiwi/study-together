@@ -9,11 +9,17 @@ function paintTodo(todo) {
   );
 }
 
+function saveTodos(newTodo) {
+  const todos = JSON.parse(localStorage.getItem('todos')) || [];
+  localStorage.setItem('todos', JSON.stringify([...todos, newTodo]));
+}
+
 function handleSubmitTodo(event) {
   event.preventDefault();
   const newTodo = $todoInput.value;
   $todoInput.value = '';
   paintTodo(newTodo);
+  saveTodos(newTodo);
 }
 
 function handleClickDelete({ target }) {
