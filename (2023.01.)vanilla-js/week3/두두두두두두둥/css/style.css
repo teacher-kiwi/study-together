@@ -54,10 +54,14 @@ body {
   }
 }
 
-#login-form input {
+#login-form input,
+#todo input {
   border: 1px solid gray;
   border-radius: 4px;
   background: transparent;
+}
+#todo {
+  text-align: center;
 }
 
 #login-form button {
@@ -67,4 +71,30 @@ body {
   background-color: #4686ff;
   color: white;
   border-radius: 4px;
+}
+
+#todo-list > li > span {
+  font-size: 30pt;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+  line-height: 15px;
+}
+#todo-list > li {
+  margin-left: 550pt;
+}
+#todo-list > li > input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+}
+
+.quote {
+  margin: 50px;
+}
+
+#todo > input[type="text"] {
+  position: absolute;
+  left: 555pt;
 }
