@@ -1,13 +1,7 @@
 import { $ } from './libs/dom.js';
+import { paintTodo } from './libs/paint.js';
 
 const $todoInput = $('#todo-form input');
-
-function paintTodo(todo) {
-  $('#todo-list').insertAdjacentHTML(
-    'beforeend',
-    `<li><span>${todo}</span><button class="del-button">X</button></li>`
-  );
-}
 
 function saveTodos(newTodo) {
   const todos = JSON.parse(localStorage.getItem('todos')) || [];
@@ -28,5 +22,8 @@ function handleClickDelete({ target }) {
   target.parentElement.remove();
 }
 
+function handleLoadWindow() {}
+
+window.addEventListener('load', handleLoadWindow);
 $('#todo-form').addEventListener('submit', handleSubmitTodo);
 $('#todo-list').addEventListener('click', handleClickDelete);
