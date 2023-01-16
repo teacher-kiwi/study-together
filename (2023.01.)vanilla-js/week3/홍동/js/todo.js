@@ -20,7 +20,16 @@ function handleSubmitTodo(event) {
 function handleClickDelete({ target }) {
   if (!target.matches('#todo-list li .del-button')) return;
 
-  target.parentElement.remove();
+  const todoId = target.parentElement.id;
+  target.parentElement.remove(todoId);
+  deleteTodoInLocalStorage(todoId);
+}
+
+function deleteTodoInLocalStorage(todoId) {
+  const todos = JSON.parse(localStorage.getItem('todos')).filter(
+    ({ id }) => id !== Number(todoId)
+  );
+  localStorage.setItem('todos', JSON.stringify(todos));
 }
 
 $('#todo-form').addEventListener('submit', handleSubmitTodo);
