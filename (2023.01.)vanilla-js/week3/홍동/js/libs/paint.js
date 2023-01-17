@@ -1,4 +1,5 @@
 import { $ } from './dom.js';
+import weathers from './weathers.js';
 
 const HIDDEN_CLASSNAME = 'hidden';
 
@@ -24,4 +25,14 @@ export function paintTodos(todos) {
     .join('');
 
   $('#todo-list').insertAdjacentHTML('beforeend', todosLi);
+}
+
+export function paintWeather(weather) {
+  const { weatherKR, icon } = weathers.filter(
+    ({ weatherName }) => weatherName === weather
+  )[0];
+  $('#weather').insertAdjacentHTML(
+    'beforeend',
+    `${icon}<span>${weatherKR}</span>`
+  );
 }
