@@ -12,15 +12,44 @@ body {
   justify-content: center;
   align-items: center;
 }
-min-height #main {
+#main {
   background-color: white;
   justify-content: center;
   align-items: center;
   text-align: center;
   opacity: 0.8;
   padding: 20px;
+  border-radius: 10px;
 }
 
-i {
+button1 {
   cursor: pointer;
+  background-color: rgb(126, 95, 157);
+  border-radius: 5px;
+  color: aliceblue;
+  text-align: center;
+  border: none;
+  padding: 5px;
+  overflow: hidden;
+}
+
+button2 {
+  background-color: rgb(65, 85, 235);
+  border-radius: 20px;
+  color: aliceblue;
+  text-align: center;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 3px 6px;
+  margin-left: 10px;
+}
+
+form {
+  padding: auto;
+  text-align: center;
+}
+
+li {
+  padding: 5px;
 }
