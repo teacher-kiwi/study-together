@@ -25,7 +25,7 @@ function loadGreetings() {
 }
 
 function loadTheme() {
-  const theme = localStorage.getItem('theme');
+  const theme = localStorage.getItem('theme') || 'white';
   $('body').className = theme;
   const selectedBtn = findSelectedBtn(theme);
   selectedBtn.classList.toggle('selected-theme');
