@@ -5,12 +5,15 @@
 const todoForm = document.querySelector("#todo");
 const todoInput = document.querySelector("#todo input");
 const todoList = document.querySelector("#todo-list");
+const todoSaveList = [];
 
 function addTodo(event) {
   event.preventDefault();
   const newTodo = todoInput.value;
   todoInput.value = "";
+  todoSaveList.push(newTodo);
   paintTodo(newTodo);
+  saveTodo();
 }
 
 function paintTodo(newTodo) {
@@ -22,8 +25,25 @@ function paintTodo(newTodo) {
   checkbox.classList.add("fade-in");
   li.appendChild(checkbox);
   li.appendChild(span);
+  checkbox.addEventListener("click", deleteTodo);
   span.innerText = newTodo;
   todoList.appendChild(li);
 }
 
+function saveTodo() {
+  localStorage.setItem("todoSaveList", JSON.stringify(todoSaveList));
+}
+
+function deleteTodo(event) {
+  const li = event.target.parentElement;
+  li.remove();
+}
+
 todoForm.addEventListener("submit", addTodo);
+
+const savedTodoList = localStorage.getItem(todoSaveList);
+
+if (savedTodoList !== null) {
+  const parsedTodos = JSON.parse(savedTodoList);
+  parsedTodos.forEach((item) => console.log("this is the turn of ", item));
+}
