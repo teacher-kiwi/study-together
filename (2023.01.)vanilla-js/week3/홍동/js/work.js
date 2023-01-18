@@ -9,8 +9,8 @@ function handleClickWorkList({ target }) {
   removeBeforeWork();
   saveWorkSpace(work);
 
-  $(`#${work}`).classList.remove('work-off');
-  $('.work-space-exit').classList.remove('work-off');
+  $(`#${work}`).classList.remove('hidden');
+  $('.work-space-exit').classList.remove('hidden');
 }
 
 function saveWorkSpace(work) {
@@ -20,12 +20,12 @@ function saveWorkSpace(work) {
 function removeBeforeWork() {
   const work = localStorage.getItem('work');
   if (!work) return;
-  $(`#${work}`).classList.add('work-off');
+  $(`#${work}`).classList.add('hidden');
 }
 
 function handleClickExitBtn() {
   removeBeforeWork();
-  $('.work-space-exit').classList.add('work-off');
+  $('.work-space-exit').classList.add('hidden');
   localStorage.removeItem('work');
 }
 

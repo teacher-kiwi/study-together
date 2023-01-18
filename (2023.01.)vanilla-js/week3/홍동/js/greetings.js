@@ -20,6 +20,7 @@ function saveUsername(username) {
 
 function handleClickLogout() {
   localStorage.removeItem(USERNAME_KEY);
+  localStorage.removeItem('work');
 
   $('#login-form').classList.remove(HIDDEN_CLASSNAME);
   $('#greeting').classList.add(HIDDEN_CLASSNAME);

@@ -16,9 +16,10 @@ function loadWorkSpace() {
   const curWork = localStorage.getItem('work');
 
   if (savedUsername) $('.work-space').classList.remove(HIDDEN_CLASSNAME);
+
   if (curWork) {
-    $(`#${curWork}`).classList.remove('work-off');
-    $('.work-space-exit').classList.remove('work-off');
+    $(`#${curWork}`).classList.remove('hidden');
+    $('.work-space-exit').classList.remove('hidden');
   }
 }
 

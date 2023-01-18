@@ -22,7 +22,7 @@
 }
 
 .work-detail {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(15, 15, 15, 0.8);
 }
 
 .work-theme {
@@ -64,6 +64,6 @@
   cursor: pointer;
 }
 
-.work-off {
+.hidden {
   display: none;
 }
