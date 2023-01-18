@@ -114,6 +114,7 @@ body {
 }
 
 #logout {
+  z-index: 15;
   position: absolute;
   bottom: 20px;
   left: 20px;

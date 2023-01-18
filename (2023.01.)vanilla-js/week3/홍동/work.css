@@ -1,4 +1,5 @@
 .work-space {
+  z-index: 10;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -21,11 +22,22 @@
 }
 
 .work-detail {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.work-off {
-  display: none;
+.work-theme {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-theme-btns {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .theme-btn {
@@ -37,13 +49,12 @@
   text-shadow: none;
   padding: 5px 10px;
   border-radius: 20px;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
 
 .selected-theme {
-  background-color: rgb(59, 59, 59);
-  color: rgb(233, 233, 233);
-  transition: background-color 0.5s ease, color 0.5s ease;
+  background-color: rgb(232, 255, 22);
+  transition: background-color 0.5s ease;
 }
 
 .work-space-exit {
@@ -51,4 +62,8 @@
   top: 20px;
   right: 20px;
   cursor: pointer;
+}
+
+.work-off {
+  display: none;
 }
