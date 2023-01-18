@@ -10,6 +10,7 @@ function handleClickWorkList({ target }) {
   saveWorkSpace(work);
 
   $(`#${work}`).classList.remove('work-off');
+  $('.work-space-exit').classList.remove('work-off');
 }
 
 function saveWorkSpace(work) {

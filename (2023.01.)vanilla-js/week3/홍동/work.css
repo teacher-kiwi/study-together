@@ -46,6 +46,9 @@
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.hidden {
-  display: none;
+.work-space-exit {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
 }
