@@ -5,19 +5,24 @@
 const todoForm = document.querySelector("#todo");
 const todoInput = document.querySelector("#todo input");
 const todoList = document.querySelector("#todo-list");
-const todoSaveList = [];
+let todoSaveList = [];
 
 function addTodo(event) {
   event.preventDefault();
   const newTodo = todoInput.value;
   todoInput.value = "";
-  todoSaveList.push(newTodo);
-  paintTodo(newTodo);
+  const newTodoObj = {
+    text: newTodo,
+    id: Date.now(),
+  };
+  todoSaveList.push(newTodoObj);
+  paintTodo(newTodoObj);
   saveTodo();
 }
 
 function paintTodo(newTodo) {
   const li = document.createElement("li");
+  li.id = newTodo.id;
   const span = document.createElement("span");
   const checkbox = document.createElement("input");
   checkbox.setAttribute("type", "checkbox");
@@ -26,7 +31,7 @@ function paintTodo(newTodo) {
   li.appendChild(checkbox);
   li.appendChild(span);
   checkbox.addEventListener("click", deleteTodo);
-  span.innerText = newTodo;
+  span.innerText = newTodo.text;
   todoList.appendChild(li);
 }
 
@@ -36,14 +41,16 @@ function saveTodo() {
 
 function deleteTodo(event) {
   const li = event.target.parentElement;
+  todoSaveList = todoSaveList.filter((toDo) => toDo.id !== parseInt(li.id));
   li.remove();
+  saveTodo();
 }
 
 todoForm.addEventListener("submit", addTodo);
 
-const savedTodoList = localStorage.getItem(todoSaveList);
+const savedTodoList = localStorage.getItem("todoSaveList");
 
 if (savedTodoList !== null) {
-  const parsedTodos = JSON.parse(savedTodoList);
-  parsedTodos.forEach((item) => console.log("this is the turn of ", item));
+  const parsedTodo = JSON.parse(savedTodoList);
+  parsedTodo.forEach(paintTodo);
 }
