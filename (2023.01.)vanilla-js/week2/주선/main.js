@@ -23,6 +23,9 @@ function submitUsername(e) {
   loginFieldset.classList.add(HIDDEN_CLASSNAME);
   gameForm.classList.remove(HIDDEN_CLASSNAME);
   trackPointer.innerText = `Hello, ${username} :) `;
+  userStatus.innerText = `${currentUsername} 님, 승리 횟수 ${localStorage.getItem(
+    currentUsername
+  )}번 입니다.`;
 }
 
 if (currentUsername === null) {
