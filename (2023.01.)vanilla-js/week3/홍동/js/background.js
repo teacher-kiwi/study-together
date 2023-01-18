@@ -1,6 +1,7 @@
 import { $ } from './libs/dom.js';
 
 function handleClickThemeBtn({ target }) {
+  if (!target.matches('#theme div')) return;
   const {
     dataset: { theme },
   } = target;

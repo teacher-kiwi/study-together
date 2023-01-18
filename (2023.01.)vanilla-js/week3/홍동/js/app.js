@@ -13,9 +13,10 @@ function handleLoadWindow() {
 
 function loadWorkSpace() {
   const savedUsername = localStorage.getItem(USERNAME_KEY);
+  const curWork = localStorage.getItem('work');
 
-  if (!savedUsername) return;
-  $('.work-space').classList.remove(HIDDEN_CLASSNAME);
+  if (savedUsername) $('.work-space').classList.remove(HIDDEN_CLASSNAME);
+  if (curWork) $(`#${curWork}`).classList.remove('work-off');
 }
 
 function loadTodos() {

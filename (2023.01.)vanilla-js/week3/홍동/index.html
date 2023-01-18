@@ -32,26 +32,24 @@
     </div>
     <div class="work-space hidden">
       <div id="work-list">
-        <div>📋 할일</div>
-        <div>🌤️ 날씨</div>
-        <div>🌁 배경</div>
+        <div data-work="todo">📋 할일</div>
+        <div data-work="weather">🌤️ 날씨</div>
+        <div data-work="theme">🌁 배경</div>
       </div>
-      <div>
-        <div id="tood" class="work-detail work-off">
-          <form id="todo-form">
-            <input type=""text" placeholder="할 일을 작성하세요. 저장하려면
-            Enter 키를 누르십시오."/>
-          </form>
-          <ul id="todo-list"></ul>
-        </div>
-        <div id="weather" class="work-detail work-off"></div>
-        <div id="theme" class="work-detail work-off">
-          <div class="theme-btn" data-theme="white">White</div>
-          <div class="theme-btn" data-theme="black">Black</div>
-          <div class="theme-btn" data-theme="green">Green</div>
-          <div class="theme-btn" data-theme="blue">Blue</div>
-          <div class="theme-btn" data-theme="red">Red</div>
-        </div>
+      <div id="todo" class="work-detail work-off">
+        <form id="todo-form">
+          <input type=""text" placeholder="할 일을 작성하세요. 저장하려면 Enter
+          키를 누르십시오."/>
+        </form>
+        <ul id="todo-list"></ul>
+      </div>
+      <div id="weather" class="work-detail work-off"></div>
+      <div id="theme" class="work-detail work-off">
+        <div class="theme-btn" data-theme="white">White</div>
+        <div class="theme-btn" data-theme="black">Black</div>
+        <div class="theme-btn" data-theme="green">Green</div>
+        <div class="theme-btn" data-theme="blue">Blue</div>
+        <div class="theme-btn" data-theme="red">Red</div>
       </div>
     </div>
     <div id="quote">
@@ -66,5 +64,6 @@
     <script type="module" src="./js/background.js"></script>
     <script type="module" src="./js/todo.js"></script>
     <script type="module" src="./js/weather.js"></script>
+    <script type="module" src="./js/work.js"></script>
   </body>
 </html>
