@@ -9,7 +9,8 @@ function onGeoOk(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
+      const weather = document.querySelector("#weather");
+      weather.innerHTML = `<img src=http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png alt="Weather Image" width="50"> ${data.main.temp}°C `;
     });
 }
 
@@ -21,11 +22,8 @@ function onGeoError() {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      const weather = document.querySelector("#weather span:first-child");
-      const city = document.querySelector("#weather span:last-child");
-      city.innerText = `(${data.name})`;
-      weather.innerHTML = `<img src=http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png alt="Weather Image" width="50"> ${data.main.temp}°C `;
-      console.log(data);
+      const weather = document.querySelector("#weather");
+      weather.innerHTML = `<span>${data.main.temp}°C<span><img src=http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png alt="Weather Image" width="100">  `;
     });
 }
 

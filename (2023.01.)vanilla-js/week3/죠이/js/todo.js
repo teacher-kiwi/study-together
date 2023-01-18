@@ -1,66 +1,130 @@
-const toDoForm = document.getElementById("todo-form");
-const toDoInput = document.querySelector("#todo-form input");
-const toDoList = document.getElementById("todo-list");
+const students = [
+  "강승기",
+  "김이준",
+  "김진휘",
+  "박상진",
+  "서태웅",
+  "신승민",
+  "오윤호",
+  "윤민준",
+  "이준혁",
+  "홍윤기",
+  "홍준기",
+  "황유찬",
+  "강민서",
+  "김민정",
+  "김서진",
+  "김소은",
+  "김예슬",
+  "어지은",
+  "원예봄",
+  "이시온",
+  "이준이",
+  "장하린",
+  "정하윤",
+  "하예린",
+];
+const rolls = [
+  "급식(밥)",
+  "급식(국)",
+  "급식(반찬1)",
+  "급식(반찬2)",
+  "급식(반찬3)",
+  "검사",
+  "교실 앞 쓸기",
+  "교실 뒤 쓸기",
+  "칠판 닦기",
+  "칠판 앞 정리",
+  "복도 쓸기",
+  "계단 쓸기",
+  "1분단 쓸기",
+  "2분단 쓸기",
+  "3분단 쓸기",
+  "창틀(앞)",
+  "창틀(뒤)",
+  "신발장(앞)",
+  "신발장(뒤)",
+  "책장 정리",
+  "쓰레기통 비우기(앞)",
+  "쓰레기통 비우기(뒤)",
+  "분리수거(기타)",
+  "분리수거(종이)",
+];
 
-const TODOS_KEY = "todos";
-//업데이트를 가능하게 하기 위해 let으로 변경
-let toDos = [];
+//누적
+// const roll = [
+//   {
+//     student: "강승기",
+//     roll: ["급식(밥)", "책장정리"],
+//   },
+// ];
 
-//로컬스토리지에 할일 목록을 저장하는데 텍스트로 변환
-function saveToDos() {
-  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
+const addRollForm = document.getElementById("addRoll-form");
+const addRollName = document.getElementById("addRollName");
+const addRollRoll = document.getElementById("addRollRoll");
+const addRollBtn = document.querySelector("#addRoll-form button");
+
+const rollList = document.getElementById("rollList");
+
+const ROLL_KEY = "studentRoll";
+
+let newRoll = [];
+
+function pickRoll() {
+  for (let i = 0; i < students.length; i++) {
+    newRoll.push({
+      student: students[i],
+      roll: rolls[i],
+    });
+  }
+  saveRoll(newRoll);
 }
 
-//할일 목록에 있는 내용을 지우는데 리스트와 로컬에는 그대로 남는 문제 여전히.
-function deleteToDo(event) {
-  const li = event.target.parentElement;
+pickRoll();
+
+const savedRoll = localStorage.getItem(ROLL_KEY);
+if (savedRoll !== null) {
+  const parsedRoll = JSON.parse(savedRoll);
+  newRoll = parsedRoll;
+  parsedRoll.forEach(paintRoll);
+}
+function saveRoll(newRoll) {
+  localStorage.setItem(ROLL_KEY, JSON.stringify(newRoll));
+}
+
+function deleteRoll(event) {
+  const li = event.target;
   li.remove();
-  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
-  saveToDos();
+  newRoll = newRoll.filter((roll) => roll.student !== roll.student);
+  saveRoll();
 }
 
-//할일 목록을 보여주는 함수
-function paintToDo(newTodo) {
-  //리스트 생성
+function paintRoll(newRoll) {
   const li = document.createElement("li");
-  li.id = newTodo.id;
-  //내용 보이게
   const span = document.createElement("span");
-  span.innerText = newTodo.text;
-  //버튼
-  const button2 = document.createElement("button2");
-  button2.innerText = "V";
-
+  span.innerText = `${newRoll.student} : ${newRoll.roll}`;
   li.appendChild(span);
-  li.appendChild(button2);
-  toDoList.appendChild(li);
-
-  button2.addEventListener("click", deleteToDo);
+  rollList.appendChild(li);
+  li.addEventListener("click", deleteRoll);
 }
 
 //입력한 내용을 보내는 함수
-function handleToDoSubmit(event) {
+function handleRollSubmit(event) {
   event.preventDefault();
-  const newTodo = toDoInput.value;
-  toDoInput.value = "";
-  const newTodoObj = {
-    text: newTodo,
-    id: Date.now(),
+  const newStudent = addRollName.value;
+  const newRollName = addRollRoll.value;
+
+  addRollName.value = "";
+  addRollRoll.value = "";
+
+  const newRollObj = {
+    student: newStudent,
+    roll: newRollName,
   };
-  toDos.push(newTodoObj);
-  paintToDo(newTodoObj);
-  saveToDos();
+  paintRoll(newRollObj);
+  newRoll.push(newRollObj);
+  saveRoll();
 }
 
 //입력 이벤트 받기
-toDoForm.addEventListener("submit", handleToDoSubmit);
-
-//저장된 할일 목록 있는지 확인
-const savedToDos = localStorage.getItem(TODOS_KEY);
-
-//만약 있으면 빈 array에 넣기 forEach 써서 각각
-if (savedToDos !== null) {
-  const parsedToDos = JSON.parse(savedToDos);
-  toDos = parsedToDos;
-  parsedToDos.forEach(paintToDo);
-}
+addRollForm.addEventListener("submit", handleRollSubmit);

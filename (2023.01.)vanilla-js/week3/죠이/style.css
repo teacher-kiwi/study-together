@@ -3,7 +3,7 @@
 }
 
 body {
-  background-image: url(https://source.unsplash.com/category/nature/1600x900);
+  /* background-image: url(https://source.unsplash.com/category/nature/1600x900); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,18 +11,45 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#main {
-  background-color: white;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  opacity: 0.8;
-  padding: 20px;
-  border-radius: 10px;
+  margin: 0 auto;
+  flex-direction: column;
+  min-width: auto;
 }
 
-button1 {
+#top {
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  background-color: white;
+  opacity: 0.8;
+}
+
+#weather {
+  width: 20%;
+  height: 100%;
+  float: left;
+  vertical-align: middle;
+  text-align: left;
+}
+#title {
+  width: 50%;
+  height: 100%;
+  float: left;
+  text-align: center;
+  margin: 0 auto;
+}
+#welcome {
+  width: 30%;
+  height: 100%;
+  float: right;
+  text-align: right;
+}
+form {
+  padding: auto;
+  text-align: center;
+  font-size: 4rem;
+}
+#changeBtn {
   cursor: pointer;
   background-color: rgb(126, 95, 157);
   border-radius: 5px;
@@ -31,6 +58,36 @@ button1 {
   border: none;
   padding: 5px;
   overflow: hidden;
+  float: right;
+}
+
+#rollList {
+  width: 100%;
+  height: 500px;
+  display: grid;
+  background-color: aquamarine;
+  grid-template-columns: repeat(5, 1fr);
+  align-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  column-gap: 20px;
+  row-gap: 20px;
+  list-style-type: none;
+}
+li {
+  border: 1px solid;
+  height: 60px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0.8;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+li:hover {
+  color: tomato;
 }
 
 button2 {
@@ -45,11 +102,12 @@ button2 {
   margin-left: 10px;
 }
 
-form {
-  padding: auto;
-  text-align: center;
-}
-
 li {
   padding: 5px;
+}
+
+#addPage {
+  width: 100%;
+  height: 150px;
+  background-color: black;
 }

@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./style.css" rel="stylesheet" />
     <title>Momentum Joy</title>
   </head>
+  <!-- 화면 구성 
+상단 : (좌)날씨 (우)인사 문구 
+메인 : 1인1역리스트 (5x5)
+하단 : 추가할 수 있는 양식 
+-->
   <body>
-    <div id="main">
-      <div id="weather">
-        <span></span>
-        <span></span>
-      </div>
-      <form id="login-form" class="hidden">
-        <input
-          required
-          maxlength="15"
-          type="text"
-          placeholder="What is your name?"
-        />
-        <button>Log In</button>
-      </form>
-      <h1 id="greeting" class="hidden"></h1>
-      <button1 id="changeBtn">Change</button1>
-      <h2 id="clock"></h2>
-      <!-- <div id="quote"> -->
-      
-        <form id="todo-form">
-          <input type="text" placeholder="Write a To Do and Press Enter" />
+    <!-- 상단페이지 : 날씨, 제목, 검사당번이름-->
+    <div id="top">
+      <div id="weather"></div>
+      <h1 id="title"></h1>
+      <div id="welcome">
+        <form id="login-form" class="hidden">
+          <input
+            required
+            maxlength="15"
+            type="text"
+            placeholder="What is your name?"
+          />
+          <button id="loginbtn">Log In</button>
         </form>
-        <ul id="todo-list"></ul>
-        <span></span>
-        <span></span>
+        <h1 id="greeting" class="hidden"></h1>
+        <button id="changeBtn">Change</button1>
       </div>
     </div>
+<!-- 본문 : 역할표 -->
+        <ul id="rollList">
+        </ul>
+<!-- 하단 : 추가 페이지 -->
+    <div id="addPage">
+      <form id="addRoll-form">
+        <input id="addRollName" type="text" placeholder="학생 이름"/>
+        <input id="addRollRoll" type="text" placeholder="역할" />
+        <button type="submit">추가</button>
+      </form>
+    </div>
+
 
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
-    <!-- <script src="js/quotes.js"></script> -->
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
