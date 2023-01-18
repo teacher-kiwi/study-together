@@ -23,4 +23,11 @@ function removeBeforeWork() {
   $(`#${work}`).classList.add('work-off');
 }
 
+function handleClickExitBtn() {
+  removeBeforeWork();
+  $('.work-space-exit').classList.add('work-off');
+  localStorage.removeItem('work');
+}
+
 $('#work-list').addEventListener('click', handleClickWorkList);
+$('.work-space-exit').addEventListener('click', handleClickExitBtn);
