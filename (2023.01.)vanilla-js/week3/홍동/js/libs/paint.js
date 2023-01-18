@@ -5,8 +5,10 @@ const HIDDEN_CLASSNAME = 'hidden';
 
 export function paintGreetings(username) {
   $('#greeting').innerText = `${username}님 반가워요!`;
+
   $('#greeting').classList.remove(HIDDEN_CLASSNAME);
   $('#logout').classList.remove(HIDDEN_CLASSNAME);
+  $('.work-space').classList.remove(HIDDEN_CLASSNAME);
 }
 
 export function paintTodo({ todo, id }) {

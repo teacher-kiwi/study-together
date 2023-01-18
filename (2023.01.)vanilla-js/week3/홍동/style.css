@@ -115,8 +115,8 @@ body {
 
 #logout {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  bottom: 20px;
+  left: 20px;
   padding: 5px 10px;
   font-size: 12px;
   background-color: white;

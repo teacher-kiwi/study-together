@@ -8,6 +8,14 @@ function handleLoadWindow() {
   loadGreetings();
   loadTheme();
   loadTodos();
+  loadWorkSpace();
+}
+
+function loadWorkSpace() {
+  const savedUsername = localStorage.getItem(USERNAME_KEY);
+
+  if (!savedUsername) return;
+  $('.work-space').classList.remove(HIDDEN_CLASSNAME);
 }
 
 function loadTodos() {

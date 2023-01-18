@@ -1,5 +1,4 @@
-#work-space {
-  z-index: 5;
+.work-space {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -54,4 +53,8 @@
   background-color: rgb(59, 59, 59);
   color: rgb(233, 233, 233);
   transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.hidden {
+  display: none;
 }

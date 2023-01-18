@@ -24,6 +24,7 @@ function handleClickLogout() {
   $('#login-form').classList.remove(HIDDEN_CLASSNAME);
   $('#greeting').classList.add(HIDDEN_CLASSNAME);
   $('#logout').classList.add(HIDDEN_CLASSNAME);
+  $('.work-space').classList.add(HIDDEN_CLASSNAME);
 }
 
 $('#login-form').addEventListener('submit', handleSubmitLoginBtn);
