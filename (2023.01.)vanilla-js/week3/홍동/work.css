@@ -1,0 +1,57 @@
+#work-space {
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+#work-list {
+  padding: 20px;
+  align-self: flex-start;
+  display: grid;
+  row-gap: 20px;
+  justify-items: start;
+}
+
+#work-list div {
+  cursor: pointer;
+}
+
+#work-space div:last-child {
+  position: relative;
+}
+
+.work-detail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.work-off {
+  display: none;
+}
+
+.theme-btn {
+  margin-right: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  text-shadow: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.selected-theme {
+  background-color: rgb(59, 59, 59);
+  color: rgb(233, 233, 233);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
