@@ -61,7 +61,8 @@ body {
   background: transparent;
 }
 #todo {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   height: 50px;
 }
 
@@ -99,4 +100,15 @@ ul {
 #todo > input[type="text"] {
   position: absolute;
   left: 555pt;
+}
+
+#weather {
+  display: flex;
+  font-size: large;
+  justify-content: end;
+  margin-right: 10px;
+}
+
+#weather > span {
+  margin: 10px;
 }
