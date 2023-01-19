@@ -1,5 +1,5 @@
 import { $ } from './libs/dom.js';
-import { paintTodo } from './libs/paint.js';
+import { paintCompletedTodo, paintTodo } from './libs/paint.js';
 
 const $todoInput = $('#todo-form input');
 
@@ -17,20 +17,54 @@ function handleSubmitTodo(event) {
   saveTodos({ todo: newTodo, id });
 }
 
-function handleClickDelete({ target }) {
-  if (!target.matches('#todo-list li .del-button')) return;
-
+function handleClickCompleted({ target }) {
+  if (!target.matches('#todo-list .complete-btn')) return;
   const todoId = target.parentElement.id;
+  const todo = target.parentElement.innerText;
+
+  const todoState = target.parentElement.parentElement.className;
+
+  if (todoState === 'progress-todos') {
+    paintCompletedTodo({ todo, id: todoId });
+  } else {
+    paintTodo({ todo, id: todoId });
+  }
   target.parentElement.remove(todoId);
-  deleteTodoInLocalStorage(todoId);
+  toggleTodoInLocalStorage(todoState, { todo, todoId });
 }
 
-function deleteTodoInLocalStorage(todoId) {
-  const todos = JSON.parse(localStorage.getItem('todos')).filter(
+function toggleTodoInLocalStorage(todoState, { todo, todoId }) {
+  const deleteKey = todoState === 'progress-todos' ? 'todos' : 'completedTodos';
+  const addKey = todoState === 'progress-todos' ? 'completedTodos' : 'todos';
+
+  console.log(JSON.parse(localStorage.getItem(deleteKey)));
+  const todos = JSON.parse(localStorage.getItem(deleteKey)).filter(
     ({ id }) => id !== Number(todoId)
   );
-  localStorage.setItem('todos', JSON.stringify(todos));
+  localStorage.setItem(deleteKey, JSON.stringify(todos));
+
+  const opsTodos = JSON.parse(localStorage.getItem(addKey)) || [];
+  localStorage.setItem(
+    addKey,
+    JSON.stringify([...opsTodos, { todo, id: Number(todoId) }])
+  );
 }
 
+// function handleClickDelete({ target }) {
+//   if (!target.matches('#todo-list li .del-button')) return;
+
+//   const todoId = target.parentElement.id;
+//   target.parentElement.remove(todoId);
+//   deleteTodoInLocalStorage(todoId);
+// }
+
+// function deleteTodoInLocalStorage(todoId) {
+//   const todos = JSON.parse(localStorage.getItem('todos')).filter(
+//     ({ id }) => id !== Number(todoId)
+//   );
+//   localStorage.setItem('todos', JSON.stringify(todos));
+// }
+
 $('#todo-form').addEventListener('submit', handleSubmitTodo);
-$('#todo-list').addEventListener('click', handleClickDelete);
+$('#todo-list').addEventListener('click', handleClickCompleted);
+// $('#todo-list').addEventListener('click', handleClickDelete);

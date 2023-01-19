@@ -38,3 +38,7 @@
 #todo-list li {
   font-size: 14px;
 }
+
+.complete-btn {
+  cursor: pointer;
+}

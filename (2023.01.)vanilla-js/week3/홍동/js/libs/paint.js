@@ -1,4 +1,4 @@
-import { $ } from './dom.js';
+import { $, $id } from './dom.js';
 import weathers from './weathers.js';
 
 const HIDDEN_CLASSNAME = 'hidden';
@@ -12,9 +12,16 @@ export function paintGreetings(username) {
 }
 
 export function paintTodo({ todo, id }) {
-  $('#todo-list').insertAdjacentHTML(
+  $('#todo-list .progress-todos').insertAdjacentHTML(
     'beforeend',
-    `<li id=${id}><span>${todo}</span><button class="del-button">X</button></li>`
+    `<li id=${id}><i class="fa-regular fa-square complete-btn"></i><span>${todo}</span></li>`
+  );
+}
+
+export function paintCompletedTodo({ todo, id }) {
+  $('#todo-list .complete-todos').insertAdjacentHTML(
+    'beforeend',
+    `<li id=${id}><i class="fa-solid fa-square-check complete-btn"></i><span>${todo}</span></li>`
   );
 }
 
@@ -22,11 +29,11 @@ export function paintTodos(todos) {
   const todosLi = todos
     .map(
       ({ todo, id }) =>
-        `<li id=${id}><span>${todo}</span><button class="del-button">X</button></li>`
+        `<li id=${id}><i class="fa-regular fa-square complete-btn"></i><span>${todo}</span></li>`
     )
     .join('');
 
-  $('#todo-list').insertAdjacentHTML('beforeend', todosLi);
+  $('#todo-list .progress-todos').insertAdjacentHTML('beforeend', todosLi);
 }
 
 export function paintWeather(weather) {
