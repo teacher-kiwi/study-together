@@ -54,10 +54,16 @@ body {
   }
 }
 
-#login-form input {
+#login-form input,
+#todo input {
   border: 1px solid gray;
   border-radius: 4px;
   background: transparent;
+}
+#todo {
+  display: flex;
+  justify-content: center;
+  height: 50px;
 }
 
 #login-form button {
@@ -70,5 +76,39 @@ body {
 }
 
 #todo-list > li > span {
-  font-size: medium;
+  font-size: 30pt;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+  line-height: 15px;
+}
+#todo-list > li {
+  margin-left: 550pt;
+}
+#todo-list > li > input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+}
+
+.quote {
+  margin: 50px;
+}
+
+#todo > input[type="text"] {
+  position: absolute;
+  left: 555pt;
+}
+
+#weather {
+  display: flex;
+  font-size: large;
+  justify-content: end;
+  margin-right: 10px;
+}
+
+#weather > span {
+  margin: 10px;
 }

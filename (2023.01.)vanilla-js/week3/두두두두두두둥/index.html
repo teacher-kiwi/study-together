@@ -4,10 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Document</title>
   </head>
   <body>
-    <script src="./main.js"></script>
+    <div id="weather">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="container">
+      <form id="login-form">
+        <input type="text" required maxlength="15" />
+        <button>Login</button>
+      </form>
+      <h1 id="name"></h1>
+      <h1 id="clock">00:00:00</h1>
+    </div>
+    <form id="todo">
+      <input type="text" placeholder="Write your To-do" />
+    </form>
+    <ul id="todo-list"></ul>
+    <div class="quote">
+      <div class="quote content">Quote</div>
+      <hr class="line" />
+      <div class="quote author">Teacher Kim</div>
+    </div>
+
+    <script src="./js/background.js"></script>
+    <script src="./js/quote.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/name.js"></script>
+    <script src="./js/todo.js"></script>
+    <script src="./js/weather.js"></script>
   </body>
 </html>
