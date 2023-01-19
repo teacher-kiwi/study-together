@@ -1,17 +1,20 @@
 import { $ } from './libs/dom.js';
 import { paintCompletedTodo, paintTodo } from './libs/paint.js';
 
+let todos = JSON.parse(localStorage.getItem('todos')) || [];
+let completedTodos = JSON.parse(localStorage.getItem('completedTodos')) || [];
+
 const $todoInput = $('#todo-form input');
 
 function saveTodos(newTodo) {
-  const todos = JSON.parse(localStorage.getItem('todos')) || [];
-  localStorage.setItem('todos', JSON.stringify([...todos, newTodo]));
+  todos.push(newTodo);
+  localStorage.setItem('todos', JSON.stringify(todos));
 }
 
 function handleSubmitTodo(event) {
   event.preventDefault();
   const newTodo = $todoInput.value;
-  const id = Date.now();
+  const id = String(Date.now());
   $todoInput.value = '';
   paintTodo({ todo: newTodo, id });
   saveTodos({ todo: newTodo, id });
@@ -20,34 +23,44 @@ function handleSubmitTodo(event) {
 function handleClickCompleted({ target }) {
   if (!target.matches('#todo-list .complete-btn')) return;
   const todoId = target.parentElement.id;
-  const todo = target.parentElement.innerText;
-
   const todoState = target.parentElement.parentElement.className;
+  const selectedTodos = todoState === 'progress-todos' ? todos : completedTodos;
+
+  console.log(todos, completedTodos);
+
+  const todo = selectedTodos.filter(({ id }) => id === todoId)[0];
 
   if (todoState === 'progress-todos') {
-    paintCompletedTodo({ todo, id: todoId });
+    paintCompletedTodo(todo);
   } else {
-    paintTodo({ todo, id: todoId });
+    paintTodo(todo);
   }
   target.parentElement.remove(todoId);
-  toggleTodoInLocalStorage(todoState, { todo, todoId });
+  toggleTodoInLocalStorage(todoState, todo);
 }
 
-function toggleTodoInLocalStorage(todoState, { todo, todoId }) {
+function toggleTodoInLocalStorage(todoState, { todo, id: todoId }) {
   const deleteKey = todoState === 'progress-todos' ? 'todos' : 'completedTodos';
   const addKey = todoState === 'progress-todos' ? 'completedTodos' : 'todos';
 
-  console.log(JSON.parse(localStorage.getItem(deleteKey)));
-  const todos = JSON.parse(localStorage.getItem(deleteKey)).filter(
-    ({ id }) => id !== Number(todoId)
+  const deletedTodos = JSON.parse(localStorage.getItem(deleteKey)).filter(
+    ({ id }) => id !== todoId
   );
-  localStorage.setItem(deleteKey, JSON.stringify(todos));
+  localStorage.setItem(deleteKey, JSON.stringify(deletedTodos));
 
-  const opsTodos = JSON.parse(localStorage.getItem(addKey)) || [];
+  const addTodos = JSON.parse(localStorage.getItem(addKey)) || [];
   localStorage.setItem(
     addKey,
-    JSON.stringify([...opsTodos, { todo, id: Number(todoId) }])
+    JSON.stringify([...addTodos, { todo, id: todoId }])
   );
+
+  if (todoState === 'progress-todos') {
+    todos = deletedTodos;
+    completedTodos = [...addTodos, { todo, id: todoId }];
+  } else {
+    completedTodos = deletedTodos;
+    todos = [...addTodos, { todo, id: todoId }];
+  }
 }
 
 // function handleClickDelete({ target }) {
