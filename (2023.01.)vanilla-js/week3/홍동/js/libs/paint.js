@@ -1,4 +1,4 @@
-import { $, $id } from './dom.js';
+import { $ } from './dom.js';
 import weathers from './weathers.js';
 
 const HIDDEN_CLASSNAME = 'hidden';
@@ -34,6 +34,17 @@ export function paintTodos(todos) {
     .join('');
 
   $('#todo-list .progress-todos').insertAdjacentHTML('beforeend', todosLi);
+}
+
+export function paintCompletedTodos(completedTodos) {
+  const todosLi = completedTodos
+    .map(
+      ({ todo, id }) =>
+        `<li id=${id}><i class="fa-solid fa-square-check complete-btn"></i><span>${todo}</span></li>`
+    )
+    .join('');
+
+  $('#todo-list .complete-todos').insertAdjacentHTML('beforeend', todosLi);
 }
 
 export function paintWeather(weather) {

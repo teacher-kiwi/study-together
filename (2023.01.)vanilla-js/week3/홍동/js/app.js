@@ -1,5 +1,9 @@
 import { $, $$ } from './libs/dom.js';
-import { paintGreetings, paintTodos } from './libs/paint.js';
+import {
+  paintCompletedTodos,
+  paintGreetings,
+  paintTodos,
+} from './libs/paint.js';
 
 const HIDDEN_CLASSNAME = 'hidden';
 const USERNAME_KEY = 'username';
@@ -8,6 +12,7 @@ function handleLoadWindow() {
   loadGreetings();
   loadTheme();
   loadTodos();
+  loadCompletedTodos();
   loadWorkSpace();
 }
 
@@ -28,6 +33,15 @@ function loadTodos() {
 
   if (!savedTodos) return;
   paintTodos(savedTodos);
+}
+
+function loadCompletedTodos() {
+  const savedCompletedTodos = JSON.parse(
+    localStorage.getItem('completedTodos')
+  );
+
+  if (!savedCompletedTodos) return;
+  paintCompletedTodos(savedCompletedTodos);
 }
 
 function loadGreetings() {
