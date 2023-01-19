@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./style.css" rel="stylesheet" />
-    <link href="./work.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/work.css" rel="stylesheet" />
+    <link href="./css/todo.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/477b5514ed.js"
       crossorigin="anonymous"
@@ -37,11 +38,23 @@
         <div data-work="theme">🌁 배경</div>
       </div>
       <div id="todo" class="work-detail hidden">
-        <form id="todo-form">
-          <input type=""text" placeholder="할 일을 작성하세요. 저장하려면 Enter
-          키를 누르십시오."/>
-        </form>
-        <ul id="todo-list"></ul>
+        <div class="todo-container">
+          <div class="todo-list-container">
+            <div>📋 할일</div>
+            <form id="todo-form">
+              <input
+                type="text"
+                placeholder="+ 할 일을 작성하세요. 저장하려면 Enter 키를 누르십시오."
+              />
+            </form>
+            <ul id="todo-list">
+              <div class="progress-todos"></div>
+              <div class="complete-todos"></div>
+            </ul>
+          </div>
+          <div class="todo-divide-line"></div>
+          <div>세부사항</div>
+        </div>
       </div>
       <div id="weather" class="work-detail hidden"></div>
       <div id="theme" class="work-detail hidden">
@@ -71,7 +84,7 @@
     <script type="module" src="./js/quotes.js"></script>
     <script type="module" src="./js/background.js"></script>
     <script type="module" src="./js/todo.js"></script>
-    <script type="module" src="./js/weather.js"></script>
+    <!-- <script type="module" src="./js/weather.js"></script> -->
     <script type="module" src="./js/work.js"></script>
   </body>
 </html>
