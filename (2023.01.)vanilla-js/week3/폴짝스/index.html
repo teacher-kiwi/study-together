@@ -4,10 +4,69 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./style.css" rel="stylesheet" />
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/779e1b5883.js" crossorigin="anonymous"></script>
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link href="CSS/clock.css" rel="stylesheet" /> 
+    <link href="CSS/nav.css" rel="stylesheet" />
+    <title>Todolist</title>
   </head>
   <body>
-    <script src="./main.js"></script>
+    <!-- removeAttribute 연습 -->
+    <!-- <div id="hello">
+      <h1 id="hello-sentence">Hello, attribute!</h1>
+      <button>Click!</button>
+    </div> -->
+    <nav class="navbar">
+      <div class="nav-logo">
+        <i class="fa-solid fa-snowflake"></i>
+        <span>Hello</span>
+      </div>
+      <ul class="nav-menu">
+        <li>Home</li>
+        <li>Location Information</li>
+        <li>Weather Information</li>
+        <li>Information</li>
+        <li id="logout">Logout</li>
+      </ul>
+      <ul class="nav-icon">
+        <li><i class="fa-brands fa-twitter"></i></li>
+        <li><i class="fa-brands fa-discord"></i></li>
+      </ul>
+    </nav>
+    <div class="contents">
+      <div id="weather">
+        <canvas id="canvas" width="300" height="300"></canvas>
+        <div>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+      <div class="todo-div">
+        <div id="login-Form">
+          <input id="login-input" class="placeholder" required type="text" placeholder="로그인할 이름을 적으세요.">
+          <input id="login-button" type="submit" value="login">
+        </div>
+        <form id="todo-form" class="hidden">
+          <input required type="text" class="placeholder">
+          <button id="submit-button">Click</button>
+        </form>
+        <ul id="todo-list"></ul>
+      </div> 
+      <figure>
+        <figcaption></figcaption>
+        <audio controls src="audio/Emotional Mess - Amy Lynn & the Honey Men.mp3">
+          <a href="audio/Emotional Mess - Amy Lynn & the Honey Men.mp3">Download Audio</a>
+        </audio>
+      </figure>
+      
+    </div>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/clock.js"></script> 
+    <script src="js/width.js"></script>
   </body>
 </html>

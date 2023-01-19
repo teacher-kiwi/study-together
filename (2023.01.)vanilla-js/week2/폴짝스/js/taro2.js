@@ -34,6 +34,7 @@ export function shuffleIndex(){
     clickCard.addEventListener("click", () => changeImage(clickCard, element, arr));
     //익명함수
     //clickCard.addEventListener("click", (element) => {console.log(element)});
+    //반환하는 것이 함수면 괜찮다...?
     clickCard.addEventListener("click", () => clickTell(clickCard, element, arr));
   })  
 }
