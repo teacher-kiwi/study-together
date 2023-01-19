@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./style.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/work.css" rel="stylesheet" />
+    <link href="./css/todo.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/477b5514ed.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Momentum App</title>
   </head>
   <body class="white">
@@ -25,21 +31,75 @@
         <input type="submit" class="login-form-submit" value="로그인" />
       </form>
     </div>
+    <div class="work-space hidden">
+      <div id="work-list">
+        <div data-work="todo">📋 할일</div>
+        <div data-work="weather">🌤️ 날씨</div>
+        <div data-work="theme">🌁 배경</div>
+      </div>
+      <div id="todo" class="work-detail hidden">
+        <div class="todo-container">
+          <div class="todo-list-container">
+            <div>
+              <div>📋 할일</div>
+            </div>
+            <form id="todo-form">
+              <input
+                type="text"
+                placeholder="+ 할 일을 작성하세요. 저장하려면 Enter 키를 누르십시오."
+              />
+            </form>
+            <ul id="todo-list">
+              <div class="progress-todos">
+                <div>진행 중</div>
+              </div>
+              <div class="complete-todos">
+                <div>완료</div>
+              </div>
+            </ul>
+          </div>
+          <div class="todo-divide-line"></div>
+          <!-- <div id="todo-detail-info" class="hidden">세부사항</div>
+          <div id="todo-detail" class="">
+            <form id="todo-detail-form">
+              <input type="text" />
+              <textarea
+                placeholder="할일 세부사항을 입력하세요. 저장하려면 아래의 변경사항 저장하기 버튼을 누르십시오."
+              ></textarea>
+              <input type="submit" value="변경사항 저장하기" />
+            </form>
+          </div> -->
+        </div>
+      </div>
+      <div id="weather" class="work-detail hidden"></div>
+      <div id="theme" class="work-detail hidden">
+        <div class="work-theme">
+          <div>아래의 버튼을 클릭하여 원하는 테마로 배경화면을 설정하세요.</div>
+          <div class="work-theme-btns">
+            <div class="theme-btn" data-theme="white">White</div>
+            <div class="theme-btn" data-theme="black">Black</div>
+            <div class="theme-btn" data-theme="green">Green</div>
+            <div class="theme-btn" data-theme="blue">Blue</div>
+            <div class="theme-btn" data-theme="red">Red</div>
+          </div>
+        </div>
+      </div>
+      <div class="work-space-exit work-off">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
     <div id="quote">
       <span></span>
       <span></span>
     </div>
-    <div id="theme">
-      <div class="theme-btn" data-theme="white">White</div>
-      <div class="theme-btn" data-theme="black">Black</div>
-      <div class="theme-btn" data-theme="green">Green</div>
-      <div class="theme-btn" data-theme="blue">Blue</div>
-      <div class="theme-btn" data-theme="red">Red</div>
-    </div>
     <div id="logout" class="hidden">로그아웃</div>
+    <script type="module" src="./js/app.js"></script>
     <script type="module" src="./js/clock.js"></script>
     <script type="module" src="./js/greetings.js"></script>
     <script type="module" src="./js/quotes.js"></script>
     <script type="module" src="./js/background.js"></script>
+    <script type="module" src="./js/todo.js"></script>
+    <!-- <script type="module" src="./js/weather.js"></script> -->
+    <script type="module" src="./js/work.js"></script>
   </body>
 </html>

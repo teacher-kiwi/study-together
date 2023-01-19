@@ -1,6 +1,11 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
 }
 
 input {
@@ -45,34 +50,9 @@ body {
   background-image: url('https://source.unsplash.com/random/1920x1080?green');
 }
 
-#theme {
-  position: absolute;
-  bottom: 10px;
-  right: 0;
-  display: flex;
-}
-
-.theme-btn {
-  margin-right: 10px;
-  font-size: 14px;
-  cursor: pointer;
-  background-color: white;
-  color: black;
-  text-shadow: none;
-  padding: 5px 10px;
-  border-radius: 20px;
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-.selected-theme {
-  background-color: rgb(59, 59, 59);
-  color: rgb(233, 233, 233);
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-
 #quote {
   position: absolute;
-  bottom: 60px;
+  bottom: 20px;
   left: 0;
   right: 0;
   display: grid;
@@ -139,9 +119,10 @@ body {
 }
 
 #logout {
+  z-index: 15;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  bottom: 10px;
+  left: 10px;
   padding: 5px 10px;
   font-size: 12px;
   background-color: white;

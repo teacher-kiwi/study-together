@@ -1,6 +1,7 @@
-import { $, $$ } from './libs/dom.js';
+import { $ } from './libs/dom.js';
 
 function handleClickThemeBtn({ target }) {
+  if (!target.matches('#theme .work-theme .theme-btn')) return;
   const {
     dataset: { theme },
   } = target;
@@ -19,22 +20,4 @@ function saveTheme(theme) {
   localStorage.setItem('theme', theme);
 }
 
-function handleLoadWindow() {
-  loadTheme();
-}
-
-function loadTheme() {
-  const theme = localStorage.getItem('theme');
-  $('body').className = theme;
-  const selectedBtn = findSelectedBtn(theme);
-  selectedBtn.classList.toggle('selected-theme');
-}
-
-function findSelectedBtn(theme) {
-  return [...$$('.theme-btn')].filter((btn) => {
-    return theme === btn.dataset.theme;
-  })[0];
-}
-
 $('#theme').addEventListener('click', handleClickThemeBtn);
-window.addEventListener('load', handleLoadWindow);
