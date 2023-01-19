@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+li {
+  list-style: none;
+}
+
 input {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -117,8 +121,8 @@ body {
 #logout {
   z-index: 15;
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 10px;
+  left: 10px;
   padding: 5px 10px;
   font-size: 12px;
   background-color: white;

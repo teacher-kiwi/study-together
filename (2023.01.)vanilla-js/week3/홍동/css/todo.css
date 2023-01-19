@@ -16,7 +16,7 @@
 }
 
 .todo-list-container div:first-child {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #todo-form input {
@@ -24,9 +24,17 @@
   padding: 10px 20px;
   background-color: rgb(219, 219, 219);
   color: black;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 #todo-form input::placeholder {
   color: rgba(60, 60, 60);
+}
+
+#todo-list div {
+  font-size: 14px;
+}
+
+#todo-list li {
+  font-size: 14px;
 }
