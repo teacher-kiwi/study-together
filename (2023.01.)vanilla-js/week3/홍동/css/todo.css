@@ -21,10 +21,14 @@
 
 #todo-form input {
   min-width: 100%;
-  padding: 10px 20px;
+  padding: 10px;
   background-color: rgb(219, 219, 219);
   color: black;
   border-radius: 5px;
+}
+
+#todo-form input:focus {
+  outline: 1.5px solid rgb(9, 255, 144);
 }
 
 #todo-form input::placeholder {
