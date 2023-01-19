@@ -1,3 +1,4 @@
+import convertDate from './convertDate.js';
 import { $ } from './dom.js';
 import weathers from './weathers.js';
 
@@ -14,14 +15,18 @@ export function paintGreetings(username) {
 export function paintTodo({ todo, id }) {
   $('#todo-list .progress-todos').insertAdjacentHTML(
     'beforeend',
-    `<li id=${id}><i class="fa-regular fa-square complete-btn"></i><span>${todo}</span></li>`
+    `<li id=${id}><i class="fa-regular fa-square complete-btn"></i><span>${todo}</span><span>${convertDate(
+      Number(id)
+    )}<span></li>`
   );
 }
 
 export function paintCompletedTodo({ todo, id }) {
   $('#todo-list .complete-todos').insertAdjacentHTML(
     'beforeend',
-    `<li id=${id}><i class="fa-solid fa-square-check complete-btn"></i><span>${todo}</span></li>`
+    `<li id=${id}><i class="fa-solid fa-square-check complete-btn"></i><span>${todo}</span><span>${convertDate(
+      Number(id)
+    )}<span></li>`
   );
 }
 
@@ -29,7 +34,9 @@ export function paintTodos(todos) {
   const todosLi = todos
     .map(
       ({ todo, id }) =>
-        `<li id=${id}><i class="fa-regular fa-square complete-btn"></i><span>${todo}</span></li>`
+        `<li id=${id}><i class="fa-regular fa-square complete-btn"></i><span>${todo}</span><span>${convertDate(
+          Number(id)
+        )}<span></li>`
     )
     .join('');
 
@@ -40,7 +47,9 @@ export function paintCompletedTodos(completedTodos) {
   const todosLi = completedTodos
     .map(
       ({ todo, id }) =>
-        `<li id=${id}><i class="fa-solid fa-square-check complete-btn"></i><span>${todo}</span></li>`
+        `<li id=${id}><i class="fa-solid fa-square-check complete-btn"></i><span>${todo}</span><span>${convertDate(
+          Number(id)
+        )}<span></li>`
     )
     .join('');
 
