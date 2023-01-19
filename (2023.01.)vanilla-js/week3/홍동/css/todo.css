@@ -31,12 +31,32 @@
   color: rgba(60, 60, 60);
 }
 
+#todo-list {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: flex-start;
+  row-gap: 20px;
+}
+
 #todo-list div {
   font-size: 14px;
 }
 
 #todo-list li {
   font-size: 14px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 10px;
+}
+
+.progress-todos,
+.complete-todos {
+  display: grid;
+  row-gap: 10px;
+}
+
+.complete-todos li {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .complete-btn {
