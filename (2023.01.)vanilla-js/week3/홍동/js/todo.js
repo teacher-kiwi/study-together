@@ -17,7 +17,7 @@ function handleSubmitTodo(event) {
   const id = String(Date.now());
   $todoInput.value = '';
   paintTodo({ todo: newTodo, id });
-  saveTodos({ todo: newTodo, id });
+  saveTodos({ todo: newTodo, id, content: '' });
 }
 
 function handleClickCompleted({ target }) {
