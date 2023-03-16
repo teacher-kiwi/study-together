@@ -84,10 +84,11 @@
 
 ## 수료증
 
-### 기무1, 두두두두두두둥, 주선, 폴짝스, 홍동
+### 기무1, 두두두두두두둥, 민트향기, 죠이, 주선, 폴짝스, 홍동
 
 ![기무1](./certificate/기무1.jpg)
 ![두두두두두두둥](./certificate/두두두두두두둥.png)
+![민트향기](./certificate/민트향기.jpg)
 ![죠이](./certificate/죠이.png)
 ![주선](./certificate/주선.jpg)
 ![폴짝스](./certificate/폴짝스.png)
